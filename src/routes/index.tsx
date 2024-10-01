@@ -5,7 +5,10 @@ import Header from "~/components/header";
 import Heading from "~/components/heading";
 import { css } from "~/styled-system/css";
 import { Gradient } from "~/components/gradient.mjs";
+import type { DjEvent} from "~/components/timeTable";
 import { TimeTable } from "~/components/timeTable";
+import { Block } from "~/components/block";
+import { ListBlock } from "~/components/listblock";
 
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -19,6 +22,14 @@ export default component$(() => {
     { time: "11:15", dj: "chokozai", vj: "irumaru" },
     { time: "12:00", dj: "kaigara" },
     { time: "22:00", dj: "pantyetta" },
+  ];
+
+  const Attention: Array<ListBlock> = [
+    { Content: "発光量が極端に多いものの使用はご遠慮ください。" },
+    {
+      Content:
+        "過度に振り回す等、周りのお客様に迷惑になる行為はご遠慮ください。",
+    },
   ];
 
   return (
@@ -96,12 +107,24 @@ export default component$(() => {
           })}
         >
           <Heading value="About" description="ライブについて" />
+          <Block Title="Overview">
+            ホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララ
+          </Block>
           <div
             class={css({
               width: 406,
             })}
           >
             <TimeTable events={TimeLine} />
+          </div>
+          <div
+            class={css({
+              width: 406,
+            })}
+          >
+            <Block Title="Attention">
+              <ListBlock ListBlocks={Attention} />
+            </Block>
           </div>
         </div>
       </main>

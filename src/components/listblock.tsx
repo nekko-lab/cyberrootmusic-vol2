@@ -1,48 +1,30 @@
 import { component$ } from "@builder.io/qwik";
 import { css } from "~/styled-system/css";
 
-export type DjEvent = {
-  time: string;
-  dj: string;
-  vj?: string;
+export type ListBlock = {
+  Content: string;
 };
 
-export type Timeline = {
-  events: Array<DjEvent>;
+export type ListBlockProps = {
+  ListBlocks: Array<ListBlock>;
 };
 
-export const TimeTable = component$(({ events }: Timeline) => {
+export const ListBlock = component$(({ ListBlocks }: ListBlockProps) => {
   return (
     <div>
-      <h1>(Timetable/)</h1>
       <div>
-        {events.map((e) => {
+        {ListBlocks.map((value, index) => {
           return (
             <div
-              key={e.time}
+              key={index}
               class={css({
-                marginTop: 4,
                 position: "relative",
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-
-                _before: {
-                  content: '"|"',
-                  position: "absolute",
-                  left: 5,
-                  top: -5,
-                },
-
-                _first: {
-                  _before: {
-                    content: '""',
-                  },
-                  marginTop: 0,
-                },
               })}
             >
-              <span>{e.time}</span>
+              <span>{index + 1}</span>
               <div
                 class={css({
                   position: "relative",
@@ -59,7 +41,7 @@ export const TimeTable = component$(({ events }: Timeline) => {
                   })}
                 ></span>
               </div>
-              <span>{e.dj}</span>
+              <span class={css({})}>{value.Content}</span>
             </div>
           );
         })}
