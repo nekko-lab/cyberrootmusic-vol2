@@ -1,11 +1,12 @@
-import { component$, useSignal, useTask$ } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
+import { animate, stagger } from "motion";
 import { css } from "~/styled-system/css";
 
 export default component$(() => {
   const sp_open = useSignal(false);
-  useTask$(() => {
-    // sp_open.value = true;
-  });
+  // useTask$(() => {
+  //   sp_open.value = true;
+  // });
 
   return (
     <header
@@ -61,7 +62,7 @@ export default component$(() => {
       <div
         class={css({
           display: { md: "none", base: "inline-block" },
-          marginY: "48px",
+          marginY: "40px",
           position: "relative",
           marginLeft: "2em",
 
@@ -69,38 +70,86 @@ export default component$(() => {
         })}
       >
         <button
-          class={css({
-            w: "2.5em",
-            h: "2.5em",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+          class={[
+            css({
+              w: "2.5em",
+              h: "2.5em",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
 
-            border: "2px solid #FFFDEB",
-            borderRadius: 30,
+              border: "2px solid #FFFDEB",
+              borderRadius: 30,
 
-            position: "relative",
-            cursor: "pointer",
-          })}
-          onClick$={() => console.log((sp_open.value = !sp_open.value))}
+              position: "relative",
+              cursor: "pointer",
+            }),
+            "sp_menu_button",
+          ]}
+          onClick$={() => {
+            sp_open.value = !sp_open.value;
+            animate(".sp_menu_button", { scale: [1.2, 1] }, { duration: 0.6 });
+
+            if (!sp_open.value) {
+              animate(
+                "ul > li > span:nth-child(2)",
+                { width: 0 },
+                {
+                  duration: 0.2,
+                  delay: stagger(0.08, { from: "last" }),
+                  easing: "ease-in-out",
+                },
+              );
+              animate(
+                "ul > li > span:nth-child(1)",
+                { width: 0 },
+                {
+                  duration: 0.1,
+                  delay: stagger(0.08, { start: 0.1, from: "last" }),
+                  easing: "ease-in-out",
+                },
+              );
+              animate(
+                "ul > span",
+                { height: 0 },
+                { duration: 0.4, delay: 0.2, easing: "ease-in-out" },
+              );
+              animate(".sp_menu", { display: "none" }, { duration: 0.6 });
+            } else {
+              animate(".sp_menu", { display: "block" }, { duration: 0 });
+              animate(
+                "ul > span",
+                { height: "calc(100% - .8em)" },
+                { duration: 0.4, easing: "ease-in-out" },
+              );
+              animate(
+                "ul > li > span:nth-child(1)",
+                { width: "15px" },
+                { duration: 0.1, delay: stagger(0.08), easing: "ease-in-out" },
+              );
+              animate(
+                "ul > li > span:nth-child(2)",
+                { width: "100%" },
+                {
+                  duration: 0.2,
+                  delay: stagger(0.08, { start: 0.1 }),
+                  easing: "ease-in-out",
+                },
+              );
+            }
+          }}
         >
           <span>&lt;/&gt;</span>
         </button>
         <div
-          class={
-            sp_open.value
-              ? css({
-                  display: "block",
-                  position: "relative",
-                  left: "1em",
-                })
-              : css({
-                  display: "none",
-                  position: "absolute",
-                  top: "2.5em",
-                  left: "1em",
-                })
-          }
+          class={[
+            css({
+              display: "none",
+              position: "relative",
+              left: "1em",
+            }),
+            "sp_menu",
+          ]}
         >
           <nav>
             <ul
@@ -108,23 +157,69 @@ export default component$(() => {
                 display: "flex",
                 flexDir: "column",
                 gap: 15,
+                paddingTop: 15,
+                paddingLeft: 19,
+                position: "relative",
 
                 "& li": {
                   position: "relative",
                   fontSize: 20,
 
-                  _after: {
-                    content: '"/"',
+                  "& span:nth-child(1)": {
+                    width: 0,
+                    height: "2px",
+                    bg: "primary",
+                    position: "absolute",
+                    top: ".75em",
+                    left: -19,
+                  },
+
+                  "& span:nth-child(2)": {
+                    display: "block",
+                    overflow: "hidden",
+                    w: 0,
+
+                    _after: {
+                      content: '"/"',
+                    },
                   },
                 },
               })}
             >
-              <li>about</li>
-              <li>info</li>
-              <li>venue</li>
-              <li>attention</li>
-              <li>organizer</li>
-              <li>news</li>
+              <span
+                class={css({
+                  width: "2px",
+                  height: "0",
+                  bg: "primary",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                })}
+              ></span>
+              <li>
+                <span></span>
+                <span>about</span>
+              </li>
+              <li>
+                <span></span>
+                <span>info</span>
+              </li>
+              <li>
+                <span></span>
+                <span>venue</span>
+              </li>
+              <li>
+                <span></span>
+                <span>attention</span>
+              </li>
+              <li>
+                <span></span>
+                <span>organizer</span>
+              </li>
+              <li>
+                <span></span>
+                <span>news</span>
+              </li>
             </ul>
           </nav>
         </div>

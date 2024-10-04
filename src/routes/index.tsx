@@ -5,7 +5,7 @@ import Header from "~/components/header";
 import Heading from "~/components/heading";
 import { css } from "~/styled-system/css";
 import { Gradient } from "~/components/gradient.mjs";
-import type { DjEvent} from "~/components/timeTable";
+import type { DjEvent } from "~/components/timeTable";
 import { TimeTable } from "~/components/timeTable";
 import { Block } from "~/components/block";
 import { ListBlock } from "~/components/listblock";
@@ -59,6 +59,9 @@ export default component$(() => {
             alignItems: "center",
 
             height: "calc(100vh - 153px)",
+            paddingTop: 153,
+
+            fontSize: { md: "medium", base: 10 },
           })}
         >
           <Console />
