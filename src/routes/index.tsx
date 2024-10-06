@@ -5,10 +5,10 @@ import Header from "~/components/header";
 import Heading from "~/components/heading";
 import { css } from "~/styled-system/css";
 import { Gradient } from "~/components/gradient.mjs";
-import type { DjEvent } from "~/components/timeTable";
 import { TimeTable } from "~/components/timeTable";
 import { Block } from "~/components/block";
 import { ListBlock } from "~/components/listblock";
+import { Attention, TimeLine } from "~/components/data";
 
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -17,20 +17,6 @@ export default component$(() => {
     gradient.el = document.querySelector("#gradient-canvas");
     gradient.connect();
   });
-
-  const TimeLine: Array<DjEvent> = [
-    { time: "11:15", dj: "chokozai", vj: "irumaru" },
-    { time: "12:00", dj: "kaigara" },
-    { time: "22:00", dj: "pantyetta" },
-  ];
-
-  const Attention: Array<ListBlock> = [
-    { Content: "発光量が極端に多いものの使用はご遠慮ください。" },
-    {
-      Content:
-        "過度に振り回す等、周りのお客様に迷惑になる行為はご遠慮ください。",
-    },
-  ];
 
   return (
     <>
@@ -41,7 +27,7 @@ export default component$(() => {
         class={css({
           position: "fixed",
           width: "100%",
-          height: "100%",
+          height: "150%",
           top: 0,
           left: 0,
           zIndex: -1,
@@ -61,7 +47,7 @@ export default component$(() => {
             height: "calc(100vh - 153px)",
             paddingTop: 153,
 
-            fontSize: { md: "medium", base: 10 },
+            fontSize: { md: "medium", sm: "small", base: 8 },
           })}
         >
           <Console />
@@ -104,7 +90,7 @@ export default component$(() => {
         <div
           class={css({
             h: "100vh",
-            maxW: { xl: 1280, lg: 1024, md: 768, sm: 640, base: "100%" },
+            maxW: { xl: 1280, lg: 1024, md: 768, sm: 640, base: "90%" },
             marginX: "auto",
             paddingY: "68px",
           })}
@@ -113,19 +99,11 @@ export default component$(() => {
           <Block Title="Overview">
             ホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララホニャララ
           </Block>
-          <div
-            class={css({
-              width: 406,
-            })}
-          >
+          <div>
             <TimeTable events={TimeLine} />
           </div>
-          <div
-            class={css({
-              width: 406,
-            })}
-          >
-            <Block Title="Attention">
+          <div>
+            <Block Title="Attention" Content="ペンライトについて">
               <ListBlock ListBlocks={Attention} />
             </Block>
           </div>
