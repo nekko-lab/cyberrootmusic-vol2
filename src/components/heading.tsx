@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { animate } from "motion";
 import { css } from "~/styled-system/css";
 
 type Heading = {
@@ -7,6 +8,8 @@ type Heading = {
 };
 
 export default component$(({ value, description }: Heading) => {
+  const base_delay = 0.3;
+
   return (
     <div
       class={css({
@@ -25,6 +28,13 @@ export default component$(({ value, description }: Heading) => {
           zIndex: 10,
           WebkitTextStroke: "1px #5A5DFF",
         })}
+        onQVisible$={(e) => {
+          animate(
+            e.detail.target,
+            { opacity: [0, 1, 0, 1, 0, 1] },
+            { duration: 0.5, delay: base_delay },
+          );
+        }}
       >
         {description}
       </span>
@@ -36,6 +46,13 @@ export default component$(({ value, description }: Heading) => {
           zIndex: 5,
           position: "relative",
         })}
+        onQVisible$={(e) => {
+          animate(
+            e.detail.target,
+            { opacity: [0, 1, 0, 1, 0, 1] },
+            { duration: 0.5, delay: base_delay + 0.1 },
+          );
+        }}
       >
         {value}
       </h1>
@@ -50,6 +67,13 @@ export default component$(({ value, description }: Heading) => {
           color: "#5A5DFF",
           zIndex: 0,
         })}
+        onQVisible$={(e) => {
+          animate(
+            e.detail.target,
+            { opacity: [0, 1, 0, 1, 0, 1] },
+            { duration: 0.5, delay: base_delay + 0.3 },
+          );
+        }}
       >
         {description}
       </span>
@@ -60,6 +84,13 @@ export default component$(({ value, description }: Heading) => {
           position: "relative",
           top: -3,
         })}
+        onQVisible$={(e) => {
+          animate(
+            e.detail.target,
+            { opacity: [0, 1] },
+            { duration: 0.5, delay: base_delay + 0.3 },
+          );
+        }}
       >
         {value}
       </span>

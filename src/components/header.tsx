@@ -65,8 +65,6 @@ export default component$(() => {
           marginY: "40px",
           position: "relative",
           marginLeft: "2em",
-
-          backdropFilter: "blur(5px)",
         })}
       >
         <button
@@ -80,9 +78,13 @@ export default component$(() => {
 
               border: "2px solid #FFFDEB",
               borderRadius: 30,
+              overflow: "hidden",
 
               position: "relative",
               cursor: "pointer",
+              backdropFilter: "blur(5px)",
+
+              zIndex: 10
             }),
             "sp_menu_button",
           ]}
@@ -147,6 +149,15 @@ export default component$(() => {
               display: "none",
               position: "relative",
               left: "1em",
+              paddingRight: 3,
+              paddingBottom: 3,
+
+              backdropFilter: "blur(10px)",
+              borderRadius: "5px",
+              borderTopLeftRadius: 0,
+
+              maskImage: "linear-gradient(to bottom, rgb(0 0 0 / 100%) 95%, rgb(0 0 0 / 0%) 100%), linear-gradient(to right, rgb(0 0 0 / 100%) 95%, rgb(0 0 0 / 0%) 100%)",
+              maskComposite: "intersect",
             }),
             "sp_menu",
           ]}
