@@ -13,7 +13,12 @@ export type Timeline = {
 
 export const TimeTable = component$(({ events }: Timeline) => {
   return (
-    <div>
+    <div
+      class={css({
+        marginTop: 2,
+        marginBottom: 5,
+      })}
+    >
       <h1>(Timetable/)</h1>
       <div>
         {events.map((e) => {

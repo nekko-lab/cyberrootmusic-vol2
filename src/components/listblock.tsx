@@ -11,41 +11,51 @@ export type ListBlockProps = {
 
 export const ListBlock = component$(({ ListBlocks }: ListBlockProps) => {
   return (
-    <div>
-      <div>
-        {ListBlocks.map((value, index) => {
-          return (
+    <div
+      class={css({
+        marginTop: 2,
+        marginBottom: 5,
+      })}
+    >
+      {ListBlocks.map((value, index) => {
+        return (
+          <div
+            key={index}
+            class={css({
+              position: "relative",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            })}
+          >
+            <span>{index + 1}</span>
             <div
-              key={index}
               class={css({
                 position: "relative",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
+                width: "full",
+                marginX: ".5em",
               })}
             >
-              <span>{index + 1}</span>
-              <div
+              <span
                 class={css({
-                  position: "relative",
+                  position: "absolute",
+                  border: "1px dashed silver",
                   width: "full",
-                  marginX: ".5em",
+                  left: 0,
                 })}
-              >
-                <span
-                  class={css({
-                    position: "absolute",
-                    border: "1px dashed silver",
-                    width: "full",
-                    left: 0,
-                  })}
-                ></span>
-              </div>
-              <span class={css({})}>{value.Content}</span>
+              ></span>
             </div>
-          );
-        })}
-      </div>
+            <span
+              class={css({
+                whiteSpace: { sm: "nowrap", base: "normal" },
+                minW: { sm: "auto", base: "80%" },
+              })}
+            >
+              {value.Content}
+            </span>
+          </div>
+        );
+      })}
     </div>
   );
 });

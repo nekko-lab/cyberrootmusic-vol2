@@ -8,11 +8,18 @@ export type BlockProps = {
 
 export const Block = component$(({ Title, Content }: BlockProps) => {
   return (
-    <div>
+    <div
+      class={css({
+        marginTop: 2,
+        marginBottom: 5,
+      })}
+    >
       <h2
         class={css({
           fontSize: 32,
           fontWeight: 700,
+
+          marginTop: 2,
 
           _after: {
             content: '"/"',
@@ -22,15 +29,22 @@ export const Block = component$(({ Title, Content }: BlockProps) => {
         {Title}
       </h2>
       {Content ? (
-        <p
+        <span
           class={css({
             fontSize: 16,
           })}
         >
           {Content}
-        </p>
+        </span>
       ) : null}
-      <Slot />
+      <div
+        class={css({
+          marginTop: 2,
+          marginBottom: 5,
+        })}
+      >
+        <Slot />
+      </div>
     </div>
   );
 });
