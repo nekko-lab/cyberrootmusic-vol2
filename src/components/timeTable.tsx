@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { animate } from "motion";
 import { css } from "~/styled-system/css";
 
 export type DjEvent = {
@@ -12,6 +13,7 @@ export type Timeline = {
 };
 
 export const TimeTable = component$(({ events }: Timeline) => {
+  const base_delay = 0.4;
   return (
     <div
       class={css({
@@ -19,8 +21,34 @@ export const TimeTable = component$(({ events }: Timeline) => {
         marginBottom: 5,
       })}
     >
-      <h1>(Timetable/)</h1>
-      <div>
+      <h1
+        class={css({
+          width: 0,
+          overflow: "hidden",
+          whiteSpace: "nowrap",
+        })}
+        onQVisible$={(e) => {
+          animate(
+            e.detail.target,
+            { width: "100%" },
+            { duration: 2, delay: base_delay + 0.1, easing: "ease-out" },
+          );
+        }}
+      >
+        (Timetable/)
+      </h1>
+      <div
+        class={css({
+          opacity: 0,
+        })}
+        onQVisible$={(e) => {
+          animate(
+            e.detail.target,
+            { opacity: 1 },
+            { duration: 0.5, delay: base_delay + 0.1, easing: "ease-in-out" },
+          );
+        }}
+      >
         {events.map((e) => {
           return (
             <div

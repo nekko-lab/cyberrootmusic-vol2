@@ -8,7 +8,7 @@ type Heading = {
 };
 
 export default component$(({ value, description }: Heading) => {
-  const base_delay = 0.3;
+  const base_delay = 0.4;
 
   return (
     <div
@@ -27,6 +27,7 @@ export default component$(({ value, description }: Heading) => {
           color: "rgba(255,255,255,0)",
           zIndex: 10,
           WebkitTextStroke: "1px #5A5DFF",
+          opacity: 0,
         })}
         onQVisible$={(e) => {
           animate(
@@ -45,6 +46,7 @@ export default component$(({ value, description }: Heading) => {
           fontSize: "64px",
           zIndex: 5,
           position: "relative",
+          opacity: 0,
         })}
         onQVisible$={(e) => {
           animate(
@@ -66,6 +68,7 @@ export default component$(({ value, description }: Heading) => {
           fontSize: "48px",
           color: "#5A5DFF",
           zIndex: 0,
+          opacity: 0,
         })}
         onQVisible$={(e) => {
           animate(
@@ -83,6 +86,7 @@ export default component$(({ value, description }: Heading) => {
           fontSize: "20px",
           position: "relative",
           top: -3,
+          opacity: 0,
         })}
         onQVisible$={(e) => {
           animate(
