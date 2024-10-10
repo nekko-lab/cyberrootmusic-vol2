@@ -67,11 +67,12 @@ export const Block = component$(({ Title, Content }: BlockProps) => {
           marginTop: 2,
           marginBottom: 5,
           opacity: 0,
+          transform: "translateX(-10px)",
         })}
         onQVisible$={(e) => {
           animate(
             e.detail.target,
-            { opacity: 1 },
+            { opacity: 1, transform: "translateX(0px)" },
             {
               duration: 0.5,
               delay: base_delay + (Content ? 0.2 : 0.1),

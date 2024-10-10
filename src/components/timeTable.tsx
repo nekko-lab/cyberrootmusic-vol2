@@ -40,11 +40,12 @@ export const TimeTable = component$(({ events }: Timeline) => {
       <div
         class={css({
           opacity: 0,
+          transform: "translateX(-10px)",
         })}
         onQVisible$={(e) => {
           animate(
             e.detail.target,
-            { opacity: 1 },
+            { opacity: 1, transform: "translateX(0px)" },
             { duration: 0.5, delay: base_delay + 0.1, easing: "ease-in-out" },
           );
         }}
