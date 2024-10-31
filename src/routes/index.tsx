@@ -9,6 +9,7 @@ import { TimeTable } from "~/components/timeTable";
 import { Block } from "~/components/block";
 import { ListBlock } from "~/components/listblock";
 import { Caution, TimeLine } from "~/components/data";
+import Footer from "~/components/footer";
 
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -87,7 +88,6 @@ export default component$(() => {
         </div>
         <div
           class={css({
-            h: "100vh",
             maxW: { xl: 1280, lg: 1024, md: 768, sm: 640, base: "90%" },
             marginX: "auto",
             paddingY: "68px",
@@ -174,6 +174,7 @@ export default component$(() => {
           <p>千葉工業大学 津田沼キャンパス 6号館 1階 615教室</p>
         </div>
       </main>
+      <Footer />
     </>
   );
 });
