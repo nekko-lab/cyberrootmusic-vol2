@@ -1,18 +1,18 @@
 import { component$ } from "@builder.io/qwik";
-import { useDocumentHead, useLocation } from "@builder.io/qwik-city";
+import { useDocumentHead } from "@builder.io/qwik-city";
 
 /**
  * The RouterHead component is placed inside of the document `<head>` element.
  */
 export const RouterHead = component$(() => {
   const head = useDocumentHead();
-  const loc = useLocation();
+  // const loc = useLocation();
 
   return (
     <>
       <title>{head.title}</title>
 
-      <link rel="canonical" href={loc.url.href} />
+      <link rel="canonical" href="https://numasai2024.nekko-lab.dev/" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="/favicon.png" />
 
@@ -26,7 +26,18 @@ export const RouterHead = component$(() => {
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,900;1,14..32,900&family=Libre+Barcode+39+Extended&family=Zen+Kaku+Gothic+New:wght@900&display=swap"
         rel="stylesheet"
       />
-      <meta property="og:image" content={loc.url.href + "/og.png"} />
+      <meta property="og:title" content="website" />
+      <meta property="og:url" content="https://numasai2024.nekko-lab.dev/" />
+      <meta
+        property="og:image"
+        content="https://numasai2024.nekko-lab.dev/og.png"
+      />
+      <meta
+        property="og:description"
+        content="Nekko Lab 千葉工業大学 津田沼際 75th ホームページ"
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@nekko_lab" />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />

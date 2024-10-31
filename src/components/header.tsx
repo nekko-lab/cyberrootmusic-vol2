@@ -5,10 +5,6 @@ import HeaderLink from "./header-link";
 
 export default component$(() => {
   const sp_open = useSignal(false);
-  // useTask$(() => {
-  //   sp_open.value = true;
-  // });
-
   return (
     <header
       class={css({
