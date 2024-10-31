@@ -140,7 +140,7 @@ export default component$(() => {
                 <h3>Nekko Cloud</h3>
                 <p>
                   おもしろ実験プライベートクラウド「Nekko
-                  Cloud」を開発するチームです！'s Originです！
+                  Cloud」を開発するチームです！
                 </p>
               </li>
             </ul>
