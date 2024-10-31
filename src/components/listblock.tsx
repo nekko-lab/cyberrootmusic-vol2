@@ -26,6 +26,7 @@ export const ListBlock = component$(({ ListBlocks }: ListBlockProps) => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+              marginBottom: ".4em",
             })}
           >
             <span>{index + 1}</span>
