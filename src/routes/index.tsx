@@ -106,6 +106,7 @@ export default component$(() => {
             <br />
             グルーブに乗って自由なムーブメントで踊ろう！
           </Block>
+
           <Block Title="About us">
             ネッコ研は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
             <br />
@@ -148,29 +149,29 @@ export default component$(() => {
           <Heading value="Attention" description="注意事項について" />
           <ListBlock ListBlocks={Caution} />
 
-          <div>
-            <Heading value="TimeTable" description="公演時間について" />
-            <div
-              class={css({
-                display: { base: "block", md: "flex" },
-                justifyContent: "space-between",
-              })}
-            >
-              {TimeLine.map((value, index) => {
-                return (
-                  <div
-                    key={index}
-                    class={css({
-                      width: "full",
-                      marginX: "10px",
-                    })}
-                  >
-                    <TimeTable events={value} header={`day ${index + 1}`} />
-                  </div>
-                );
-              })}
-            </div>
+          <Heading value="TimeTable" description="公演時間について" />
+          <div
+            class={css({
+              display: { base: "block", md: "flex" },
+              justifyContent: "space-between",
+            })}
+          >
+            {TimeLine.map((value, index) => {
+              return (
+                <div
+                  key={index}
+                  class={css({
+                    width: "full",
+                    marginX: "10px",
+                  })}
+                >
+                  <TimeTable events={value} header={`day ${index + 1}`} />
+                </div>
+              );
+            })}
           </div>
+          <Heading value="Venue" description="開催場所について" />
+          <p>千葉工業大学 津田沼キャンパス 6号館 1階 615教室</p>
         </div>
       </main>
     </>
@@ -182,7 +183,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "Nekko Lab 千葉工業大学 津田沼際 75th ホームページ",
     },
   ],
 };

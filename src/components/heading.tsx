@@ -15,6 +15,7 @@ export default component$(({ value, description }: Heading) => {
       class={css({
         position: "relative",
       })}
+      id={value}
     >
       <span
         class={css({
