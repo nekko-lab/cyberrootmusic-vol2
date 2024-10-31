@@ -94,7 +94,7 @@ export default component$(() => {
           })}
         >
           <Heading value="About" description="イベントについて" />
-          <Block Title="About event">
+          <Block Title="About this event">
             😎
             音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！
             😎
@@ -103,6 +103,7 @@ export default component$(() => {
             は、音楽と観客が主役になれるDJイベントです。
             <br />
             体を解放して音楽とひとつになれる、そんな空間を目指しています。
+            <br />
             グルーブに乗って自由なムーブメントで踊ろう！
           </Block>
           <Block Title="About us">
@@ -145,9 +146,7 @@ export default component$(() => {
           </Block>
 
           <Heading value="Attention" description="注意事項について" />
-          <Block Title="Caution" Content="注意事項について">
-            <ListBlock ListBlocks={Caution} />
-          </Block>
+          <ListBlock ListBlocks={Caution} />
 
           <div>
             <Heading value="TimeTable" description="公演時間について" />

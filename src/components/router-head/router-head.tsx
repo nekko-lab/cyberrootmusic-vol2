@@ -14,7 +14,7 @@ export const RouterHead = component$(() => {
 
       <link rel="canonical" href={loc.url.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" href="/favicon.png" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
@@ -26,6 +26,7 @@ export const RouterHead = component$(() => {
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,900;1,14..32,900&family=Libre+Barcode+39+Extended&family=Zen+Kaku+Gothic+New:wght@900&display=swap"
         rel="stylesheet"
       />
+      <meta property="og:image" content={loc.url.href + "/og.png"} />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />
