@@ -26,7 +26,7 @@ export const RouterHead = component$(() => {
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,900;1,14..32,900&family=Libre+Barcode+39+Extended&family=Zen+Kaku+Gothic+New:wght@900&display=swap"
         rel="stylesheet"
       />
-      <meta property="og:title" content="website" />
+      <meta property="og:title" content="Nekko Lab | 津田沼際 75th" />
       <meta property="og:url" content="https://numasai2024.nekko-lab.dev/" />
       <meta
         property="og:image"
