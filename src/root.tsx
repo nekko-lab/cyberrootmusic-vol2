@@ -8,6 +8,7 @@ import { RouterHead } from "./components/router-head/router-head";
 import { isDev } from "@builder.io/qwik/build";
 
 import "./global.css";
+import { css } from "./styled-system/css";
 
 export default component$(() => {
   /**
@@ -29,7 +30,13 @@ export default component$(() => {
         )}
         <RouterHead />
       </head>
-      <body lang="en">
+      <body
+        lang="ja"
+        class={css({
+          bg: "bgPrimary",
+          color: "primary",
+        })}
+      >
         <RouterOutlet />
         {!isDev && <ServiceWorkerRegister />}
       </body>
