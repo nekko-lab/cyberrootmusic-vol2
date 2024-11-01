@@ -62,11 +62,14 @@ export default component$(() => {
         </div>
         <div
           class={css({
+            position: "fixed",
+            width: "100%",
             height: "154px",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "end",
-            marginX: "35px",
+            // marginX: "35px",
+            paddingX: "35px",
             paddingBottom: "20px",
             fontSize: "10px",
           })}
