@@ -100,12 +100,12 @@ export default component$(() => {
             paddingY: "68px",
           })}
         >
+          {/* --- About --- */}
           <Section>
             <Heading value="About" description="イベントについて" />
             <Block Title="About this event">
+              {/* Word Break */}
               <budoux-ja>
-                {" "}
-                {/* Word Break */}
                 😎
                 音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！
                 😎
@@ -120,9 +120,8 @@ export default component$(() => {
             </Block>
 
             <Block Title="About us">
+              {/* Word Break */}
               <budoux-ja>
-                {" "}
-                {/* Word Break */}
                 ネッコ研は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
                 <br />
                 現在、以下のチームが活動中！
@@ -147,9 +146,8 @@ export default component$(() => {
               >
                 <li>
                   <h3>Miku's Origin</h3>
+                  {/* Word Break */}
                   <budoux-ja>
-                    {" "}
-                    {/* Word Break */}
                     <p>
                       ボカロオタク達がアツいライブを製作するチーム、Miku's
                       Originです！
@@ -158,9 +156,8 @@ export default component$(() => {
                 </li>
                 <li>
                   <h3>Nekko Cloud</h3>
+                  {/* Word Break */}
                   <budoux-ja>
-                    {" "}
-                    {/* Word Break */}
                     <p>
                       おもしろ実験プライベートクラウド「Nekko
                       Cloud」を開発するチームです！
@@ -171,15 +168,16 @@ export default component$(() => {
             </Block>
           </Section>
 
+          {/* --- Attention --- */}
           <Section>
             <Heading value="Attention" description="注意事項について" />
+            {/* Word Break */}
             <budoux-ja>
-              {" "}
-              {/* Word Break */}
               <ListBlock ListBlocks={Caution} />
             </budoux-ja>
           </Section>
 
+          {/* --- TimeTable --- */}
           <Section>
             <Heading value="TimeTable" description="公演時間について" />
             <div
@@ -204,6 +202,7 @@ export default component$(() => {
             </div>
           </Section>
 
+          {/* --- Venue --- */}
           <Section>
             <Heading value="Venue" description="開催場所について" />
             <budoux-ja>
