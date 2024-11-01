@@ -11,6 +11,7 @@ import { Section } from "~/components/section";
 import { ListBlock } from "~/components/listblock";
 import { Caution, TimeLine } from "~/components/data";
 import Footer from "~/components/footer";
+import { animate } from "motion";
 
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -25,6 +26,8 @@ export default component$(() => {
       {/* Word Break */}
       <script src="https://unpkg.com/budoux/bundle/budoux-ja.min.js" />
       <Header />
+
+      {/* --- background gradient --- */}
       <canvas
         id="gradient-canvas"
         data-transition-in
@@ -36,6 +39,13 @@ export default component$(() => {
           left: 0,
           zIndex: -1,
         })}
+        onQVisible$={(e) => {
+          animate(
+            e.detail.target,
+            { opacity: [0, 1] },
+            { duration: 1, easing: "ease-in-out", delay: 0.5 },
+          );
+        }}
       />
       <main
         class={css({
@@ -60,6 +70,8 @@ export default component$(() => {
         >
           <Console />
         </div>
+
+        {/* --- decoration --- */}
         <div
           class={css({
             position: "fixed",
@@ -73,6 +85,13 @@ export default component$(() => {
             paddingBottom: "20px",
             fontSize: "10px",
           })}
+          onQVisible$={(e) => {
+            animate(
+              e.detail.target,
+              { opacity: [0, 1] },
+              { duration: 1, easing: "ease-in-out", delay: 0.7 },
+            );
+          }}
         >
           <div
             class={css({
@@ -82,7 +101,7 @@ export default component$(() => {
           >
             <span>Cyber &lt;/&gt; Music</span>
             <span>November. 23-25</span>
-            <span>at {"${locale}"}</span>
+            <span>at CIT Tsudanuma Campus</span>
             <span
               class={css({
                 fontFamily: "barcode",

@@ -13,6 +13,13 @@ export default component$(() => {
         width: "full",
         fontFamily: "primary",
       })}
+      onQVisible$={(e) => {
+        animate(
+          e.detail.target,
+          { opacity: [0, 1] },
+          { duration: 1, easing: "ease-in-out", delay: 1 },
+        );
+      }}
     >
       <div
         class={css({
@@ -151,16 +158,20 @@ export default component$(() => {
             css({
               display: "none",
               position: "relative",
-              left: "1em",
-              paddingRight: 3,
-              paddingBottom: 3,
+              // left: "3em",
+              top: -4,
+              paddingX: 5,
+              paddingY: 5,
 
               backdropFilter: "blur(10px)",
               borderRadius: "5px",
               borderTopLeftRadius: 0,
 
               maskImage:
-                "linear-gradient(to bottom, rgb(0 0 0 / 100%) 95%, rgb(0 0 0 / 0%) 100%), linear-gradient(to right, rgb(0 0 0 / 100%) 95%, rgb(0 0 0 / 0%) 100%)",
+                "linear-gradient(to top, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%), \
+              linear-gradient(to bottom, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%), \
+              linear-gradient(to left, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%), \
+              linear-gradient(to right, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%)",
               maskComposite: "intersect",
             }),
             "sp_menu",

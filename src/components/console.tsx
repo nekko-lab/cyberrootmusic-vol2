@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { css } from "~/styled-system/css";
+import { animate } from "motion";
 
 export default component$(() => {
   return (
@@ -8,6 +9,13 @@ export default component$(() => {
         fontFamily: "primary",
         fontWeight: 700,
       })}
+      onQVisible$={(e) => {
+        animate(
+          e.detail.target,
+          { opacity: [0, 1, 0, 1, 0, 0, 0, 0, 1] },
+          { duration: 0.7, delay: 0 },
+        );
+      }}
     >
       <div
         class={css({
