@@ -221,7 +221,8 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Nekko Lab 千葉工業大学 津田沼際 75th ホームページ",
+      content:
+        '音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！\nCyber </> Music (サイバー ルート ミュージック) は、音楽と観客が主役になれるDJイベントです。',
     },
   ],
 };
