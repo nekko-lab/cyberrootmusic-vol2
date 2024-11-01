@@ -217,7 +217,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Nekko Lab | 津田沼際 75th",
+  title: "Cyber </> Music by Nekko Lab",
   meta: [
     {
       name: "description",
