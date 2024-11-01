@@ -170,7 +170,7 @@ export default component$(() => {
 
           {/* --- Attention --- */}
           <Section>
-            <Heading value="Attention" description="注意事項について" />
+            <Heading value="Attention" description="注意事項" />
             {/* Word Break */}
             <budoux-ja>
               <ListBlock ListBlocks={Caution} />
@@ -179,7 +179,7 @@ export default component$(() => {
 
           {/* --- TimeTable --- */}
           <Section>
-            <Heading value="TimeTable" description="公演時間について" />
+            <Heading value="TimeTable" description="公演時間" />
             <div
               class={css({
                 display: { base: "block", md: "flex" },
@@ -204,7 +204,7 @@ export default component$(() => {
 
           {/* --- Venue --- */}
           <Section>
-            <Heading value="Venue" description="開催場所について" />
+            <Heading value="Venue" description="開催場所" />
             <budoux-ja>
               <p>千葉工業大学 津田沼キャンパス 6号館 1階 615教室</p>
             </budoux-ja>
