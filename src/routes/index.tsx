@@ -22,6 +22,8 @@ export default component$(() => {
 
   return (
     <>
+      {/* Word Break */}
+      <script src="https://unpkg.com/budoux/bundle/budoux-ja.min.js" />
       <Header />
       <canvas
         id="gradient-canvas"
@@ -38,6 +40,10 @@ export default component$(() => {
       <main
         class={css({
           fontFamily: "primary",
+
+          // Word Break
+          whiteSpace: "pre-wrap",
+          wordBreak: "keep-all",
         })}
       >
         <div
@@ -97,22 +103,30 @@ export default component$(() => {
           <Section>
             <Heading value="About" description="イベントについて" />
             <Block Title="About this event">
-              😎
-              音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！
-              😎
-              <br />
-              Cyber &lt;/&gt; Music (サイバー ルート ミュージック)
-              は、音楽と観客が主役になれるDJイベントです。
-              <br />
-              体を解放して音楽とひとつになれる、そんな空間を目指しています。
-              <br />
-              グルーブに乗って自由なムーブメントで踊ろう！
+              <budoux-ja>
+                {" "}
+                {/* Word Break */}
+                😎
+                音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！
+                😎
+                <br />
+                Cyber &lt;/&gt; Music (サイバー ルート ミュージック)
+                は、音楽と観客が主役になれるDJイベントです。
+                <br />
+                体を解放して音楽とひとつになれる、そんな空間を目指しています。
+                <br />
+                グルーブに乗って自由なムーブメントで踊ろう！
+              </budoux-ja>
             </Block>
 
             <Block Title="About us">
-              ネッコ研は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
-              <br />
-              現在、以下のチームが活動中！
+              <budoux-ja>
+                {" "}
+                {/* Word Break */}
+                ネッコ研は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
+                <br />
+                現在、以下のチームが活動中！
+              </budoux-ja>
               <ul
                 class={css({
                   "& li": {
@@ -133,17 +147,25 @@ export default component$(() => {
               >
                 <li>
                   <h3>Miku's Origin</h3>
-                  <p>
-                    ボカロオタク達がアツいライブを製作するチーム、Miku's
-                    Originです！
-                  </p>
+                  <budoux-ja>
+                    {" "}
+                    {/* Word Break */}
+                    <p>
+                      ボカロオタク達がアツいライブを製作するチーム、Miku's
+                      Originです！
+                    </p>
+                  </budoux-ja>
                 </li>
                 <li>
                   <h3>Nekko Cloud</h3>
-                  <p>
-                    おもしろ実験プライベートクラウド「Nekko
-                    Cloud」を開発するチームです！
-                  </p>
+                  <budoux-ja>
+                    {" "}
+                    {/* Word Break */}
+                    <p>
+                      おもしろ実験プライベートクラウド「Nekko
+                      Cloud」を開発するチームです！
+                    </p>
+                  </budoux-ja>
                 </li>
               </ul>
             </Block>
@@ -151,7 +173,11 @@ export default component$(() => {
 
           <Section>
             <Heading value="Attention" description="注意事項について" />
-            <ListBlock ListBlocks={Caution} />
+            <budoux-ja>
+              {" "}
+              {/* Word Break */}
+              <ListBlock ListBlocks={Caution} />
+            </budoux-ja>
           </Section>
 
           <Section>
@@ -180,7 +206,9 @@ export default component$(() => {
 
           <Section>
             <Heading value="Venue" description="開催場所について" />
-            <p>千葉工業大学 津田沼キャンパス 6号館 1階 615教室</p>
+            <budoux-ja>
+              <p>千葉工業大学 津田沼キャンパス 6号館 1階 615教室</p>
+            </budoux-ja>
           </Section>
         </div>
       </main>
