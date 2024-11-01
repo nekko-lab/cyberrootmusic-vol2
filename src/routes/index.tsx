@@ -39,7 +39,7 @@ export default component$(() => {
           fontFamily: "primary",
         })}
       >
-        <dvi
+        <div
           class={css({
             display: "flex",
             justifyContent: "center",
@@ -52,7 +52,7 @@ export default component$(() => {
           })}
         >
           <Console />
-        </dvi>
+        </div>
         <div
           class={css({
             height: "154px",
