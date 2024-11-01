@@ -7,6 +7,7 @@ import { css } from "~/styled-system/css";
 import { Gradient } from "~/components/gradient.mjs";
 import { TimeTable } from "~/components/timeTable";
 import { Block } from "~/components/block";
+import { Section } from "~/components/section";
 import { ListBlock } from "~/components/listblock";
 import { Caution, TimeLine } from "~/components/data";
 import Footer from "~/components/footer";
@@ -93,85 +94,94 @@ export default component$(() => {
             paddingY: "68px",
           })}
         >
-          <Heading value="About" description="イベントについて" />
-          <Block Title="About this event">
-            😎
-            音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！
-            😎
-            <br />
-            Cyber &lt;/&gt; Music (サイバー ルート ミュージック)
-            は、音楽と観客が主役になれるDJイベントです。
-            <br />
-            体を解放して音楽とひとつになれる、そんな空間を目指しています。
-            <br />
-            グルーブに乗って自由なムーブメントで踊ろう！
-          </Block>
+          <Section>
+            <Heading value="About" description="イベントについて" />
+            <Block Title="About this event">
+              😎
+              音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！
+              😎
+              <br />
+              Cyber &lt;/&gt; Music (サイバー ルート ミュージック)
+              は、音楽と観客が主役になれるDJイベントです。
+              <br />
+              体を解放して音楽とひとつになれる、そんな空間を目指しています。
+              <br />
+              グルーブに乗って自由なムーブメントで踊ろう！
+            </Block>
 
-          <Block Title="About us">
-            ネッコ研は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
-            <br />
-            現在、以下のチームが活動中！
-            <ul
+            <Block Title="About us">
+              ネッコ研は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
+              <br />
+              現在、以下のチームが活動中！
+              <ul
+                class={css({
+                  "& li": {
+                    listStyleType: "disc",
+                    left: "1em",
+                    position: "relative",
+                    marginTop: "1em",
+
+                    "& h3": {
+                      fontSize: "1.2em",
+                    },
+
+                    "& p": {
+                      marginTop: ".2em",
+                    },
+                  },
+                })}
+              >
+                <li>
+                  <h3>Miku's Origin</h3>
+                  <p>
+                    ボカロオタク達がアツいライブを製作するチーム、Miku's
+                    Originです！
+                  </p>
+                </li>
+                <li>
+                  <h3>Nekko Cloud</h3>
+                  <p>
+                    おもしろ実験プライベートクラウド「Nekko
+                    Cloud」を開発するチームです！
+                  </p>
+                </li>
+              </ul>
+            </Block>
+          </Section>
+
+          <Section>
+            <Heading value="Attention" description="注意事項について" />
+            <ListBlock ListBlocks={Caution} />
+          </Section>
+
+          <Section>
+            <Heading value="TimeTable" description="公演時間について" />
+            <div
               class={css({
-                "& li": {
-                  listStyleType: "disc",
-                  left: "1em",
-                  position: "relative",
-                  marginTop: "1em",
-
-                  "& h3": {
-                    fontSize: "1.2em",
-                  },
-
-                  "& p": {
-                    marginTop: ".2em",
-                  },
-                },
+                display: { base: "block", md: "flex" },
+                justifyContent: "space-between",
               })}
             >
-              <li>
-                <h3>Miku's Origin</h3>
-                <p>
-                  ボカロオタク達がアツいライブを製作するチーム、Miku's
-                  Originです！
-                </p>
-              </li>
-              <li>
-                <h3>Nekko Cloud</h3>
-                <p>
-                  おもしろ実験プライベートクラウド「Nekko
-                  Cloud」を開発するチームです！
-                </p>
-              </li>
-            </ul>
-          </Block>
+              {TimeLine.map((value, index) => {
+                return (
+                  <div
+                    key={index}
+                    class={css({
+                      width: "full",
+                      marginX: "10px",
+                    })}
+                  >
+                    <TimeTable events={value} header={`day ${index + 1}`} />
+                  </div>
+                );
+              })}
+            </div>
+          </Section>
 
-          <Heading value="Attention" description="注意事項について" />
-          <ListBlock ListBlocks={Caution} />
-
-          <Heading value="TimeTable" description="公演時間について" />
-          <div
-            class={css({
-              display: { base: "block", md: "flex" },
-              justifyContent: "space-between",
-            })}
-          >
-            {TimeLine.map((value, index) => {
-              return (
-                <div
-                  key={index}
-                  class={css({
-                    width: "full",
-                    marginX: "10px",
-                  })}
-                >
-                  <TimeTable events={value} header={`day ${index + 1}`} />
-                </div>
-              );
-            })}
-          </div>
-          <Heading value="Venue" description="開催場所について" />
-          <p>千葉工業大学 津田沼キャンパス 6号館 1階 615教室</p>
+          <Section>
+            <Heading value="Venue" description="開催場所について" />
+            <p>千葉工業大学 津田沼キャンパス 6号館 1階 615教室</p>
+          </Section>
         </div>
       </main>
       <Footer />
