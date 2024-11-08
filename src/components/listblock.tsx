@@ -26,7 +26,8 @@ export const ListBlock = component$(({ ListBlocks }: ListBlockProps) => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              marginBottom: ".4em",
+              marginBottom: ".5em",
+              letterSpacing: "0.03em",
             })}
           >
             <span>{index + 1}</span>
@@ -52,7 +53,7 @@ export const ListBlock = component$(({ ListBlocks }: ListBlockProps) => {
                   whiteSpace: { sm: "nowrap", base: "normal" },
                   minW: { sm: "auto", base: "80%" },
                 }),
-                value.Content.length > 44
+                value.Content.length > 44 && value.Content.length < 80
                   ? css({
                       whiteSpace: {
                         xl: "nowrap !important",
@@ -60,7 +61,12 @@ export const ListBlock = component$(({ ListBlocks }: ListBlockProps) => {
                       },
                       minW: { xl: "auto !important", base: "80% !important" },
                     })
-                  : null,
+                  : value.Content.length >= 80
+                    ? css({
+                        whiteSpace: "normal !important",
+                        minW: "80% !important",
+                      })
+                    : null,
               ]}
             >
               {value.Content}
