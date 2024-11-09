@@ -65,26 +65,30 @@ export const ListBlock = component$(({ ListBlocks }: ListBlockProps) => {
               ></span>
             </div>
             <span
-              class={[
-                css({
-                  whiteSpace: { sm: "nowrap", base: "normal" },
-                  minW: { sm: "auto", base: "80%" },
-                }),
-                value.Content.length > 44 && value.Content.length < 80
+              class={
+                value.Content.length < 40
                   ? css({
-                      whiteSpace: {
-                        xl: "nowrap !important",
-                        base: "normal !important",
-                      },
-                      minW: { xl: "auto !important", base: "80% !important" },
+                      whiteSpace: { sm: "nowrap", base: "normal" },
+                      minW: { sm: "auto", base: "80%" },
                     })
-                  : value.Content.length >= 80
+                  : value.Content.length < 44
                     ? css({
-                        whiteSpace: "normal !important",
-                        minW: "80% !important",
+                        whiteSpace: { md: "nowrap", base: "normal" },
+                        minW: { md: "auto", base: "80%" },
                       })
-                    : null,
-              ]}
+                    : value.Content.length < 80
+                      ? css({
+                          whiteSpace: {
+                            xl: "nowrap",
+                            base: "normal",
+                          },
+                          minW: { xl: "auto", base: "80%" },
+                        })
+                      : css({
+                          whiteSpace: "normal",
+                          minW: "80%",
+                        })
+              }
             >
               {value.Content}
             </span>
