@@ -12,6 +12,7 @@ import { ListBlock } from "~/components/listblock";
 import { Caution, TimeLine } from "~/components/data";
 import Footer from "~/components/footer";
 import { animate } from "motion";
+import Image from "./map.png?jsx";
 
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -20,6 +21,8 @@ export default component$(() => {
     gradient.el = document.querySelector("#gradient-canvas");
     gradient.connect();
   });
+
+  const base_delay = 0.4;
 
   return (
     <>
@@ -228,7 +231,69 @@ export default component$(() => {
           <Section>
             <Heading value="Venue" description="開催場所" />
             <budoux-ja>
-              <p>千葉工業大学 津田沼キャンパス 6号館 1階 615教室</p>
+              <p
+                class={css({
+                  fontSize: "26px",
+                  letterSpacing: "0.02em",
+                  opacity: 0,
+                  transform: "translateX(-10px)",
+                })}
+                onQVisible$={(e) => {
+                  animate(
+                    e.detail.target,
+                    { opacity: 1, transform: "translateX(0px)" },
+                    {
+                      duration: 0.5,
+                      delay: base_delay + 0.2,
+                      easing: "ease-in-out",
+                    },
+                  );
+                }}
+              >
+                千葉工業大学 津田沼キャンパス 6号館 1階 615教室
+              </p>
+              <div
+                class={css({
+                  display: "flex",
+                  gap: 6,
+                  flexDir: { md: "row", base: "column" },
+                  alignItems: "center",
+                  marginTop: "10px",
+                  opacity: 0,
+                  transform: "translateX(-10px)",
+                })}
+                onQVisible$={(e) => {
+                  animate(
+                    e.detail.target,
+                    { opacity: 1, transform: "translateX(0px)" },
+                    {
+                      duration: 0.6,
+                      delay: base_delay + 0.45,
+                      easing: "ease-in-out",
+                    },
+                  );
+                }}
+              >
+                <Image
+                  class={css({
+                    bg: "#f6f6f6",
+                    borderRadius: 5,
+                    overflow: "hidden",
+                    width: { base: "full" },
+                  })}
+                />
+                <iframe
+                  class={css({
+                    width: "full",
+                    height: { base: "500px" },
+                    borderRadius: 5,
+                    overflow: "hidden",
+                  })}
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.479229660451!2d140.018525971287!3d35.689822914710305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x602280271c38ab81%3A0x9b26ed71e15bb456!2z5Y2D6JGJ5bel5qWt5aSn5a2mIOa0peeUsOayvOOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1731421291588!5m2!1sja!2sjp"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </budoux-ja>
           </Section>
         </div>
