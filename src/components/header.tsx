@@ -1,13 +1,10 @@
 import { component$, useSignal } from "@builder.io/qwik";
 import { animate, stagger } from "motion";
 import { css } from "~/styled-system/css";
+import HeaderLink from "./header-link";
 
 export default component$(() => {
   const sp_open = useSignal(false);
-  // useTask$(() => {
-  //   sp_open.value = true;
-  // });
-
   return (
     <header
       class={css({
@@ -16,6 +13,13 @@ export default component$(() => {
         width: "full",
         fontFamily: "primary",
       })}
+      onQVisible$={(e) => {
+        animate(
+          e.detail.target,
+          { opacity: [0, 1] },
+          { duration: 1, easing: "ease-in-out", delay: 1 },
+        );
+      }}
     >
       <div
         class={css({
@@ -50,12 +54,18 @@ export default component$(() => {
               },
             })}
           >
-            <li>about</li>
-            <li>info</li>
-            <li>venue</li>
-            <li>attention</li>
-            <li>organizer</li>
-            <li>news</li>
+            <li>
+              <HeaderLink value="About" />
+            </li>
+            <li>
+              <HeaderLink value="Attention" />
+            </li>
+            <li>
+              <HeaderLink value="TimeTable" />
+            </li>
+            <li>
+              <HeaderLink value="Venue" />
+            </li>
           </ul>
         </nav>
       </div>
@@ -84,7 +94,7 @@ export default component$(() => {
               cursor: "pointer",
               backdropFilter: "blur(5px)",
 
-              zIndex: 10
+              zIndex: 10,
             }),
             "sp_menu_button",
           ]}
@@ -148,15 +158,20 @@ export default component$(() => {
             css({
               display: "none",
               position: "relative",
-              left: "1em",
-              paddingRight: 3,
-              paddingBottom: 3,
+              // left: "3em",
+              top: -4,
+              paddingX: 5,
+              paddingY: 5,
 
               backdropFilter: "blur(10px)",
               borderRadius: "5px",
               borderTopLeftRadius: 0,
 
-              maskImage: "linear-gradient(to bottom, rgb(0 0 0 / 100%) 95%, rgb(0 0 0 / 0%) 100%), linear-gradient(to right, rgb(0 0 0 / 100%) 95%, rgb(0 0 0 / 0%) 100%)",
+              maskImage:
+                "linear-gradient(to top, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%), \
+              linear-gradient(to bottom, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%), \
+              linear-gradient(to left, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%), \
+              linear-gradient(to right, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%)",
               maskComposite: "intersect",
             }),
             "sp_menu",
@@ -171,6 +186,7 @@ export default component$(() => {
                 paddingTop: 15,
                 paddingLeft: 19,
                 position: "relative",
+                w: 140,
 
                 "& li": {
                   position: "relative",
@@ -189,6 +205,7 @@ export default component$(() => {
                     display: "block",
                     overflow: "hidden",
                     w: 0,
+                    whiteSpace: "nowrap",
 
                     _after: {
                       content: '"/"',
@@ -209,27 +226,27 @@ export default component$(() => {
               ></span>
               <li>
                 <span></span>
-                <span>about</span>
+                <span>
+                  <HeaderLink value="About" />
+                </span>
               </li>
               <li>
                 <span></span>
-                <span>info</span>
+                <span>
+                  <HeaderLink value="TimeTable" />
+                </span>
               </li>
               <li>
                 <span></span>
-                <span>venue</span>
+                <span>
+                  <HeaderLink value="Attention" />
+                </span>
               </li>
               <li>
                 <span></span>
-                <span>attention</span>
-              </li>
-              <li>
-                <span></span>
-                <span>organizer</span>
-              </li>
-              <li>
-                <span></span>
-                <span>news</span>
+                <span>
+                  <HeaderLink value="Venue" />
+                </span>
               </li>
             </ul>
           </nav>

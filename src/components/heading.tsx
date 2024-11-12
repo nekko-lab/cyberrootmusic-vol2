@@ -15,6 +15,7 @@ export default component$(({ value, description }: Heading) => {
       class={css({
         position: "relative",
       })}
+      id={value}
     >
       <span
         class={css({
@@ -24,9 +25,9 @@ export default component$(({ value, description }: Heading) => {
           fontFamily: "heading_ja",
           fontWeight: 900,
           fontSize: "48px",
-          color: "rgba(255,255,255,0)",
+          color: "transparent",
           zIndex: 10,
-          WebkitTextStroke: "1px #5A5DFF",
+          WebkitTextStroke: ".5px #5a5dff",
           opacity: 0,
         })}
         onQVisible$={(e) => {

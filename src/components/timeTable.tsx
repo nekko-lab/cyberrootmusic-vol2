@@ -10,9 +10,10 @@ export type DjEvent = {
 
 export type Timeline = {
   events: Array<DjEvent>;
+  header?: string;
 };
 
-export const TimeTable = component$(({ events }: Timeline) => {
+export const TimeTable = component$(({ events, header }: Timeline) => {
   const base_delay = 0.4;
   return (
     <div
@@ -26,6 +27,7 @@ export const TimeTable = component$(({ events }: Timeline) => {
           width: 0,
           overflow: "hidden",
           whiteSpace: "nowrap",
+          fontSize: "1.3em",
         })}
         onQVisible$={(e) => {
           animate(
@@ -35,7 +37,7 @@ export const TimeTable = component$(({ events }: Timeline) => {
           );
         }}
       >
-        (Timetable/)
+        {header ? header : "(Timetable/)"}
       </h1>
       <div
         class={css({
