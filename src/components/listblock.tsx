@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { animate, stagger } from "motion";
 import { css } from "~/styled-system/css";
 
 export type ListBlock = {
@@ -10,23 +11,40 @@ export type ListBlockProps = {
 };
 
 export const ListBlock = component$(({ ListBlocks }: ListBlockProps) => {
+  const base_delay = 0.4;
   return (
-    <div
+    <ul
       class={css({
         marginTop: 2,
         marginBottom: 5,
       })}
+      id="Attention-list"
+      onQVisible$={() => {
+        animate(
+          "#Attention-list > li",
+          { opacity: 1, transform: "translateX(0px)" },
+          {
+            duration: 0.5,
+            delay: stagger(0.125, { start: base_delay + 0.1 }),
+            easing: "ease-in-out",
+          },
+        );
+      }}
     >
       {ListBlocks.map((value, index) => {
         return (
-          <div
+          <li
             key={index}
             class={css({
               position: "relative",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              marginBottom: ".4em",
+              marginBottom: ".5em",
+              letterSpacing: "0.03em",
+
+              opacity: 0,
+              transform: "translateX(-10px)",
             })}
           >
             <span>{index + 1}</span>
@@ -47,27 +65,36 @@ export const ListBlock = component$(({ ListBlocks }: ListBlockProps) => {
               ></span>
             </div>
             <span
-              class={[
-                css({
-                  whiteSpace: { sm: "nowrap", base: "normal" },
-                  minW: { sm: "auto", base: "80%" },
-                }),
-                value.Content.length > 44
+              class={
+                value.Content.length < 40
                   ? css({
-                      whiteSpace: {
-                        xl: "nowrap !important",
-                        base: "normal !important",
-                      },
-                      minW: { xl: "auto !important", base: "80% !important" },
+                      whiteSpace: { sm: "nowrap", base: "normal" },
+                      minW: { sm: "auto", base: "80%" },
                     })
-                  : null,
-              ]}
+                  : value.Content.length < 44
+                    ? css({
+                        whiteSpace: { md: "nowrap", base: "normal" },
+                        minW: { md: "auto", base: "80%" },
+                      })
+                    : value.Content.length < 80
+                      ? css({
+                          whiteSpace: {
+                            xl: "nowrap",
+                            base: "normal",
+                          },
+                          minW: { xl: "auto", base: "80%" },
+                        })
+                      : css({
+                          whiteSpace: "normal",
+                          minW: "80%",
+                        })
+              }
             >
               {value.Content}
             </span>
-          </div>
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 });
