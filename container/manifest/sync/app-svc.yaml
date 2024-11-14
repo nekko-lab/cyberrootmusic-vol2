@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: app-svc
 spec:
+  selector:
+    app: app
   ports:
   - protocol: TCP
     port: 80
