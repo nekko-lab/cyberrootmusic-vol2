@@ -12,7 +12,8 @@ import { ListBlock } from "~/components/listblock";
 import { Caution, TimeLine } from "~/components/data";
 import Footer from "~/components/footer";
 import { animate } from "motion";
-import Image from "./map.png?jsx";
+import Map from "./map.png?jsx";
+import Character from "./character.png?jsx";
 
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -128,69 +129,99 @@ export default component$(() => {
           {/* --- About --- */}
           <Section>
             <Heading value="About" description="イベントについて" />
-            <Block Title="About this event">
-              {/* Word Break */}
-              <budoux-ja>
-                😎
-                音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！
-                😎
-                <br />
-                Cyber &lt;/&gt; Music (サイバー ルート ミュージック)
-                は、音楽と観客が主役になれるDJイベントです。
-                <br />
-                体を解放して音楽とひとつになれる、そんな空間を目指しています。
-                <br />
-                グルーブに乗って自由なムーブメントで踊ろう！
-              </budoux-ja>
-            </Block>
+            <div
+              class={css({
+                display: "flex",
+                gap: { lg: 20, base: 5 },
+                flexDir: { lg: "row", base: "column" },
+              })}
+            >
+              <div>
+                <Block Title="About this event">
+                  {/* Word Break */}
+                  <budoux-ja>
+                    😎
+                    音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！
+                    😎
+                    <br />
+                    Cyber &lt;/&gt; Music (サイバー ルート ミュージック)
+                    は、音楽と観客が主役になれるDJイベントです。
+                    <br />
+                    体を解放して音楽とひとつになれる、そんな空間を目指しています。
+                    <br />
+                    グルーブに乗って自由なムーブメントで踊ろう！
+                  </budoux-ja>
+                </Block>
 
-            <Block Title="About us">
-              {/* Word Break */}
-              <budoux-ja>
-                ネッコ研は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
-                <br />
-                現在、以下のチームが活動中！
-              </budoux-ja>
-              <ul
+                <Block Title="About us">
+                  {/* Word Break */}
+                  <budoux-ja>
+                    ネッコ研は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
+                    <br />
+                    現在、以下のチームが活動中！
+                  </budoux-ja>
+                  <ul
+                    class={css({
+                      "& li": {
+                        listStyleType: "disc",
+                        left: "1em",
+                        position: "relative",
+                        marginTop: "1em",
+
+                        "& h3": {
+                          fontSize: "1.2em",
+                        },
+
+                        "& p": {
+                          marginTop: ".2em",
+                        },
+                      },
+                    })}
+                  >
+                    <li>
+                      <h3>Miku's Origin</h3>
+                      {/* Word Break */}
+                      <budoux-ja>
+                        <p>
+                          ボカロオタク達がアツいライブを製作するチーム、Miku's
+                          Originです！
+                        </p>
+                      </budoux-ja>
+                    </li>
+                    <li>
+                      <h3>Nekko Cloud</h3>
+                      {/* Word Break */}
+                      <budoux-ja>
+                        <p>
+                          おもしろ実験プライベートクラウド「Nekko
+                          Cloud」を開発するチームです！
+                        </p>
+                      </budoux-ja>
+                    </li>
+                  </ul>
+                </Block>
+              </div>
+              <Character
                 class={css({
-                  "& li": {
-                    listStyleType: "disc",
-                    left: "1em",
-                    position: "relative",
-                    marginTop: "1em",
-
-                    "& h3": {
-                      fontSize: "1.2em",
-                    },
-
-                    "& p": {
-                      marginTop: ".2em",
-                    },
-                  },
+                  margin: { lg: 0, base: "auto" },
+                  opacity: 0,
+                  transform: "translateX(-10px)",
+                  height: 500,
+                  width: "auto",
                 })}
-              >
-                <li>
-                  <h3>Miku's Origin</h3>
-                  {/* Word Break */}
-                  <budoux-ja>
-                    <p>
-                      ボカロオタク達がアツいライブを製作するチーム、Miku's
-                      Originです！
-                    </p>
-                  </budoux-ja>
-                </li>
-                <li>
-                  <h3>Nekko Cloud</h3>
-                  {/* Word Break */}
-                  <budoux-ja>
-                    <p>
-                      おもしろ実験プライベートクラウド「Nekko
-                      Cloud」を開発するチームです！
-                    </p>
-                  </budoux-ja>
-                </li>
-              </ul>
-            </Block>
+                onQVisible$={(e) => {
+                  animate(
+                    e.detail.target,
+                    { opacity: 1, transform: "translateX(0px)" },
+                    {
+                      duration: 0.5,
+                      delay: base_delay + 0.5,
+                      easing: "ease-in-out",
+                    },
+                  );
+                }}
+              />
+            </div>
           </Section>
 
           {/* --- Attention --- */}
@@ -274,7 +305,7 @@ export default component$(() => {
                   );
                 }}
               >
-                <Image
+                <Map
                   class={css({
                     bg: "#f6f6f6",
                     borderRadius: 5,
