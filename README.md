@@ -8,3 +8,9 @@ Cyber </> Music (サイバー ルート ミュージック) は、​音楽と�
 ## Develop Stack
 - Qwik
 - Vite
+
+## Static Site Generator (Node.js)
+
+```shell
+npm run build.server
+```
