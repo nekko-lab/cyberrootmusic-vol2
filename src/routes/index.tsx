@@ -208,6 +208,7 @@ export default component$(() => {
                   alignItems: "center",
                   opacity: 0,
                   transform: "translateX(-10px)",
+                  minWidth: "354px",
                 })}
                 onQVisible$={(e) => {
                   animate(
