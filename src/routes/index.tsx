@@ -353,6 +353,7 @@ export default component$(() => {
                   flexDir: { md: "row", base: "column" },
                   margin: 5,
                   gap: 4,
+                  flexWrap: "wrap",
                 })}
               >
                 <div
