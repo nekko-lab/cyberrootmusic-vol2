@@ -14,6 +14,8 @@ import Footer from "~/components/footer";
 import { animate } from "motion";
 import Map from "./map.png?jsx";
 import Character from "./character.png?jsx";
+import Nekoreru_menu from "./nekoteru_menu.jpg?jsx";
+import Nekoteru from "./nekoteru.jpg?jsx";
 
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -337,6 +339,54 @@ export default component$(() => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
+              </div>
+            </budoux-ja>
+          </Section>
+
+          {/* --- Venue --- */}
+          <Section>
+            <Heading value="SpecialThanks" description="協力" />
+            <budoux-ja>
+              <div
+                class={css({
+                  display: "flex",
+                  flexDir: { md: "row", base: "column" },
+                  margin: 5,
+                  gap: 4,
+                })}
+              >
+                <div
+                  class={css({
+                    height: "500px",
+                    width: "353px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    border: "white 1px solid",
+                    fontSize: "30px",
+                    backdropFilter: "blur(1px)",
+                  })}
+                >
+                  Kazuma
+                </div>
+                <div>
+                  <Nekoteru
+                    class={css({
+                      height: "500px",
+                      width: "auto",
+                    })}
+                    alt="ネコテル ポスター"
+                  />
+                </div>
+                <div>
+                  <Nekoreru_menu
+                    class={css({
+                      height: "500px",
+                      width: "auto",
+                    })}
+                    alt="ネコテル メニュー"
+                  />
+                </div>
               </div>
             </budoux-ja>
           </Section>
