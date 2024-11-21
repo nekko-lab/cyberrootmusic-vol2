@@ -346,6 +346,16 @@ export default component$(() => {
           {/* --- Venue --- */}
           <Section>
             <Heading value="SpecialThanks" description="協力" />
+            <Block Title="ステージ共同制作">
+              <p
+                class={css({
+                  marginBottom: 20,
+                })}
+              >
+                けんとけん かずま
+              </p>
+            </Block>
+            <Heading value="Ads" description="広告" />
             <budoux-ja>
               <div
                 class={css({
@@ -354,22 +364,21 @@ export default component$(() => {
                   margin: 5,
                   gap: 4,
                   flexWrap: "wrap",
+                  opacity: 0,
+                  transform: "translateX(-10px)",
                 })}
+                onQVisible$={(e) => {
+                  animate(
+                    e.detail.target,
+                    { opacity: 1, transform: "translateX(0px)" },
+                    {
+                      duration: 0.6,
+                      delay: base_delay + 0.45,
+                      easing: "ease-in-out",
+                    },
+                  );
+                }}
               >
-                <div
-                  class={css({
-                    height: "500px",
-                    width: "353px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    border: "white 1px solid",
-                    fontSize: "30px",
-                    backdropFilter: "blur(1px)",
-                  })}
-                >
-                  Kazuma
-                </div>
                 <div>
                   <Nekoteru
                     class={css({
