@@ -20,7 +20,7 @@ export const TimeLine: Array<Array<DjEvent>> = [
   ],
   [
     { time: "10:30", dj: "kaigara Project SEKAI" },
-    { time: "11:20", dj: "flight flightDJ" },
+    { time: "11:20", dj: "flight add DJ" },
     { time: "12:10", dj: "cyokozai Sakanaction" },
     { time: "14:00", dj: "kaigara VOCALOID" },
     { time: "14:50", dj: "flight Orangestar DJ" },
