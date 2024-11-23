@@ -262,7 +262,10 @@ export default component$(() => {
                       marginX: "10px",
                     })}
                   >
-                    <TimeTable events={value} header={`day ${index + 1}`} />
+                    <TimeTable
+                      events={value}
+                      header={`day ${index + 1} 11/${23 + index}`}
+                    />
                   </div>
                 );
               })}
