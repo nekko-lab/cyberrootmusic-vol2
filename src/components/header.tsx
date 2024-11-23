@@ -23,7 +23,7 @@ export default component$(() => {
     >
       <div
         class={css({
-          display: { md: "flex", base: "none" },
+          display: { lg: "flex", base: "none" },
           justifyContent: "space-between",
           fontWeight: 300,
           fontSize: 20,
@@ -77,7 +77,7 @@ export default component$(() => {
       </div>
       <div
         class={css({
-          display: { md: "none", base: "inline-block" },
+          display: { lg: "none", base: "inline-block" },
           marginY: "40px",
           position: "relative",
           marginLeft: "2em",
