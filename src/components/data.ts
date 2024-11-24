@@ -12,11 +12,11 @@ export const TimeLine: Array<Array<DjEvent>> = [
   ],
   [
     { time: "10:30", dj: "flight" },
-    { time: "11:20", dj: "cyokozai" },
-    { time: "12:10", dj: "kaigara" },
-    { time: "14:00", dj: "cyokozai" },
-    { time: "14:50", dj: "kaigara" },
-    { time: "15:30", dj: "flight" },
+    { time: "13:00", dj: "cyokozai" },
+    { time: "14:00", dj: "kaigara" },
+    { time: "14:40", dj: "cyokozai" },
+    { time: "15:30", dj: "kaigara" },
+    { time: "16:20", dj: "flight" },
   ],
   [
     { time: "10:30", dj: "kaigara" },
