@@ -23,7 +23,7 @@ export default component$(() => {
     >
       <div
         class={css({
-          display: { md: "flex", base: "none" },
+          display: { lg: "flex", base: "none" },
           justifyContent: "space-between",
           fontWeight: 300,
           fontSize: 20,
@@ -66,12 +66,18 @@ export default component$(() => {
             <li>
               <HeaderLink value="Venue" />
             </li>
+            <li>
+              <HeaderLink value="SpecialThanks" />
+            </li>
+            <li>
+              <HeaderLink value="Ads" />
+            </li>
           </ul>
         </nav>
       </div>
       <div
         class={css({
-          display: { md: "none", base: "inline-block" },
+          display: { lg: "none", base: "inline-block" },
           marginY: "40px",
           position: "relative",
           marginLeft: "2em",
@@ -169,7 +175,7 @@ export default component$(() => {
 
               maskImage:
                 "linear-gradient(to top, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%), \
-              linear-gradient(to bottom, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%), \
+              linear-gradient(to bottom, rgb(0 0 0 / 100%) 90%, rgb(0 0 0 / 0%) 100%), \
               linear-gradient(to left, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%), \
               linear-gradient(to right, rgb(0 0 0 / 100%) 85%, rgb(0 0 0 / 0%) 100%)",
               maskComposite: "intersect",
@@ -186,7 +192,7 @@ export default component$(() => {
                 paddingTop: 15,
                 paddingLeft: 19,
                 position: "relative",
-                w: 140,
+                w: 220,
 
                 "& li": {
                   position: "relative",
@@ -246,6 +252,18 @@ export default component$(() => {
                 <span></span>
                 <span>
                   <HeaderLink value="Venue" />
+                </span>
+              </li>
+              <li>
+                <span></span>
+                <span>
+                  <HeaderLink value="SpecialThanks" />
+                </span>
+              </li>
+              <li>
+                <span></span>
+                <span>
+                  <HeaderLink value="Ads" />
                 </span>
               </li>
             </ul>
