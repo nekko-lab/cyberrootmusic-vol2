@@ -43,6 +43,7 @@ export const TimeTable = component$(({ events, header }: Timeline) => {
         class={css({
           opacity: 0,
           transform: "translateX(-10px)",
+          marginTop: 5,
         })}
         onQVisible$={(e) => {
           animate(
@@ -95,7 +96,13 @@ export const TimeTable = component$(({ events, header }: Timeline) => {
                   })}
                 ></span>
               </div>
-              <span>{e.dj}</span>
+              <span
+                class={css({
+                  whiteSpace: "nowrap",
+                })}
+              >
+                {e.dj}
+              </span>
             </div>
           );
         })}
