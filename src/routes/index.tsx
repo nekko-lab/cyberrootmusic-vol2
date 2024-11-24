@@ -14,6 +14,8 @@ import Footer from "~/components/footer";
 import { animate } from "motion";
 import Map from "./map.png?jsx";
 import Character from "./character.png?jsx";
+import Nekoreru_menu from "./nekoteru_menu.jpg?jsx";
+import Nekoteru from "./nekoteru.jpg?jsx";
 
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -340,6 +342,64 @@ export default component$(() => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
+              </div>
+            </budoux-ja>
+          </Section>
+
+          {/* --- Venue --- */}
+          <Section>
+            <Heading value="SpecialThanks" description="協力" />
+            <Block Title="ステージ共同制作">
+              <p
+                class={css({
+                  marginBottom: 20,
+                })}
+              >
+                けんとけん かずま
+              </p>
+            </Block>
+            <Heading value="Ads" description="広告" />
+            <budoux-ja>
+              <div
+                class={css({
+                  display: "flex",
+                  flexDir: { md: "row", base: "column" },
+                  margin: 5,
+                  gap: 4,
+                  flexWrap: "wrap",
+                  opacity: 0,
+                  transform: "translateX(-10px)",
+                })}
+                onQVisible$={(e) => {
+                  animate(
+                    e.detail.target,
+                    { opacity: 1, transform: "translateX(0px)" },
+                    {
+                      duration: 0.6,
+                      delay: base_delay + 0.45,
+                      easing: "ease-in-out",
+                    },
+                  );
+                }}
+              >
+                <div>
+                  <Nekoteru
+                    class={css({
+                      height: "500px",
+                      width: "auto",
+                    })}
+                    alt="ネコテル ポスター"
+                  />
+                </div>
+                <div>
+                  <Nekoreru_menu
+                    class={css({
+                      height: "500px",
+                      width: "auto",
+                    })}
+                    alt="ネコテル メニュー"
+                  />
+                </div>
               </div>
             </budoux-ja>
           </Section>
