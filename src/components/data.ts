@@ -20,10 +20,10 @@ export const TimeLine: Array<Array<DjEvent>> = [
   ],
   [
     { time: "12:00", dj: "kaigara Project SEKAI" },
-    { time: "12:50", dj: "flight add DJ" },
+    { time: "12:50", dj: "flight Orangestar DJ" },
     { time: "13:40", dj: "cyokozai House" },
     { time: "14:30", dj: "kaigara VOCALOID" },
-    { time: "15:10", dj: "flight Orangestar DJ" },
+    { time: "15:10", dj: "flight add DJ" },
     { time: "15:50", dj: "cyokozai Sakanaction and...?" },
   ],
 ];
