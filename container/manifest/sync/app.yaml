@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: app
-          image: "ghcr.io/nekko-lab/tsudanuma24-hp:226019797f0f9219f164e065508f233a6cbdb120"
+          image: "ghcr.io/nekko-lab/tsudanuma24-hp:917e4de84234ee1bef67f99b3bb01062d8d4c0cc"
