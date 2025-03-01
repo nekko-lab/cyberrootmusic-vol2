@@ -5,6 +5,8 @@ Cyber </> Music (サイバー ルート ミュージック) は、​音楽と�
 体を​解放して​音楽と​ひとつに​なれる、​そんな​空間を​目指しています。  
 グルーブに​乗って​自由な​ムーブメントで​踊ろう！
 
+[HomePage](https://numasai2024.nekko-lab.dev/)
+
 ## Develop Stack
 - Qwik
 - Vite
