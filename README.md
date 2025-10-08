@@ -14,5 +14,12 @@ Cyber </> Music (サイバー ルート ミュージック) は、​音楽と�
 ## Static Site Generator (Node.js)
 
 ```shell
+# 1. Panda CSSのstyle systemを生成（初回または設定変更時）
+npx panda codegen
+
+# 2. クライアントビルド
+npm run build.client
+
+# 3. サーバービルド
 npm run build.server
 ```
