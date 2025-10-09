@@ -69,4 +69,8 @@ export class Gradient {
     this.drawBubbles();
     requestAnimationFrame(() => this.animate());
   }
+
+  connect() {
+    // connect method implementation
+  }
 }
