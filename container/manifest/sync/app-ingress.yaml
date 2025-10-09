@@ -13,13 +13,13 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: react-svc
+            name: main-svc
             port:
               number: 80
       - path: /dj
         pathType: Prefix
         backend:
           service:
-            name: qwik-svc
+            name: cyber_root_music-svc
             port:
               number: 80
