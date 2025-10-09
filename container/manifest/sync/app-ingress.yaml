@@ -1,17 +1,25 @@
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: app-ingress
+  name: numasai25-ingress
 spec:
   ingressClassName: cloudflare-tunnel
   rules:
-  - host: "numasai2024.nekko-lab.dev"
+  - host: "numasai25.nekko-lab.dev"
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: app-svc
+            name: react-svc
+            port:
+              number: 80
+      - path: /dj
+        pathType: Prefix
+        backend:
+          service:
+            name: qwik-svc
             port:
               number: 80

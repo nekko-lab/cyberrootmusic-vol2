@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: react
+  template:
+    metadata:
+      labels:
+        app: react
+    spec:
+      containers:
+        - name: react
+          image: "ghcr.io/nekko-lab/react-app:SHA"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-svc
+spec:
+  selector:
+    app: react
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
