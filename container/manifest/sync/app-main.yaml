@@ -2,28 +2,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react
+  name: main
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: react
+      app: main
   template:
     metadata:
       labels:
-        app: react
+        app: main
     spec:
       containers:
-        - name: react
-          image: "ghcr.io/nekko-lab/react-app:SHA"
+        - name: main
+          image: "ghcr.io/nekko-lab/main-app:SHA"
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: react-svc
+  name: main-svc
 spec:
   selector:
-    app: react
+    app: main
   ports:
   - protocol: TCP
     port: 80
