@@ -6,7 +6,7 @@ import Heading from "~/components/heading";
 import { css } from "~/styled-system/css";
 import { Gradient } from "~/components/gradient.mjs";
 import { TimeTable } from "~/components/timeTable";
-// import { Block } from "~/components/block";
+import { Block } from "~/components/block";
 import { Section } from "~/components/section";
 import { ListBlock } from "~/components/listblock";
 import { Caution, TimeLine } from "~/components/data";
