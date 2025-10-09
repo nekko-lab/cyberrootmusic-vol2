@@ -35,7 +35,7 @@ export default component$(() => {
             color: "#5a5dff",
           })}
         >
-          ~/tsudanuma24
+          ~/tsudanuma25
         </span>
         <span
           class={css({
@@ -44,7 +44,7 @@ export default component$(() => {
         >
           $
         </span>
-        <span>cat title.txt</span>
+        <span>cat title.vol2.txt</span>
       </div>
       <span>
         &nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;&nbsp;__&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
