@@ -6,16 +6,16 @@ import Heading from "~/components/heading";
 import { css } from "~/styled-system/css";
 import { Gradient } from "~/components/gradient.mjs";
 import { TimeTable } from "~/components/timeTable";
-import { Block } from "~/components/block";
+// import { Block } from "~/components/block";
 import { Section } from "~/components/section";
 import { ListBlock } from "~/components/listblock";
 import { Caution, TimeLine } from "~/components/data";
 import Footer from "~/components/footer";
 import { animate } from "motion";
 import Map from "./map.png?jsx";
-import Character from "./character.png?jsx";
-import Nekoreru_menu from "./nekoteru_menu.jpg?jsx";
-import Nekoteru from "./nekoteru.jpg?jsx";
+// import Character from "./character.png?jsx";
+// import Nekoreru_menu from "./nekoteru_menu.jpg?jsx";
+// import Nekoteru from "./nekoteru.jpg?jsx";
 
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -143,7 +143,7 @@ export default component$(() => {
                   {/* Word Break */}
                   <budoux-ja>
                     😎
-                    音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！
+                    音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！
                     😎
                     <br />
                     Cyber &lt;/&gt; Music (サイバー ルート ミュージック)
@@ -158,7 +158,7 @@ export default component$(() => {
                 <Block Title="About us">
                   {/* Word Break */}
                   <budoux-ja>
-                    ネッコ研は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
+                    ネットワークコンテンツ研究会は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
                     <br />
                     現在、以下のチームが活動中！
                   </budoux-ja>
@@ -203,37 +203,6 @@ export default component$(() => {
                   </ul>
                 </Block>
               </div>
-              <div
-                class={css({
-                  display: "flex",
-                  flexDir: "column",
-                  alignItems: "center",
-                  opacity: 0,
-                  transform: "translateX(-10px)",
-                  minWidth: "354px",
-                })}
-                onQVisible$={(e) => {
-                  animate(
-                    e.detail.target,
-                    { opacity: 1, transform: "translateX(0px)" },
-                    {
-                      duration: 0.5,
-                      delay: base_delay + 0.5,
-                      easing: "ease-in-out",
-                    },
-                  );
-                }}
-              >
-                <Character
-                  class={css({
-                    margin: { lg: 0, base: "auto" },
-                    height: 500,
-                    width: "auto",
-                  })}
-                  alt="キャラクター"
-                />
-                <p>illusted by 菓子工船</p>
-              </div>
             </div>
           </Section>
 
@@ -266,7 +235,7 @@ export default component$(() => {
                   >
                     <TimeTable
                       events={value}
-                      header={`day ${index + 1} 11/${23 + index}`}
+                      header={`day ${1 + index} 11/${22 + index}`}
                     />
                   </div>
                 );
@@ -349,16 +318,16 @@ export default component$(() => {
           {/* --- Venue --- */}
           <Section>
             <Heading value="SpecialThanks" description="協力" />
-            <Block Title="ステージ共同制作">
+            <Block Title="外部協力">
               <p
                 class={css({
                   marginBottom: 20,
                 })}
               >
-                けんとけん かずま
+                千葉工業大学非公認DJサークル DDD
               </p>
             </Block>
-            <Heading value="Ads" description="広告" />
+            {/* <Heading value="Ads" description="広告" />
             <budoux-ja>
               <div
                 class={css({
@@ -401,7 +370,7 @@ export default component$(() => {
                   />
                 </div>
               </div>
-            </budoux-ja>
+            </budoux-ja> */}
           </Section>
         </div>
       </main>
@@ -416,7 +385,7 @@ export const head: DocumentHead = {
     {
       name: "description",
       content:
-        '音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！\nCyber </> Music (サイバー ルート ミュージック) は、音楽と観客が主役になれるDJイベントです。',
+        '音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！\nCyber </> Music (サイバー ルート ミュージック) は、音楽と観客が主役になれるDJイベントです。',
     },
   ],
 };
