@@ -227,8 +227,10 @@ export default component$(() => {
                 <Character
                   class={css({
                     margin: { lg: 0, base: "auto" },
-                    height: 500,
+                    height: "auto",
+                    maxHeight: 500,
                     width: "auto",
+                    maxWidth: 500,
                   })}
                   alt="ロゴ2025"
                 />
