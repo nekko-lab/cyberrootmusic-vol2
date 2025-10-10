@@ -25,7 +25,7 @@ export default component$(() => {
     gradient.connect();
   });
 
-  const base_delay = 0.4;
+  const base_delay = 0.2;
 
   return (
     <>
@@ -106,7 +106,7 @@ export default component$(() => {
             })}
           >
             <span>Cyber &lt;/&gt; Music</span>
-            <span>November. 23-25</span>
+            <span>November. 22-23</span>
             <span>at CIT Tsudanuma Campus</span>
             <span
               class={css({
@@ -119,7 +119,7 @@ export default component$(() => {
               Nekko Lab
             </span>
           </div>
-          <div>2024 &copy; Nekko Lab</div>
+          <div>2025 &copy; Nekko Lab</div>
         </div>
         <div
           class={css({
