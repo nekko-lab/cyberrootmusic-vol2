@@ -25,21 +25,21 @@ export default component$(() => {
       >
         <span
           class={css({
-            color: "#41ff58",
+            color: "#ebdf00ff",
           })}
         >
           admin@nekko_lab
         </span>
         <span
           class={css({
-            color: "#5a5dff",
+            color: "#ff570fff",
           })}
         >
           ~/tsudanuma25
         </span>
         <span
           class={css({
-            color: "#5a5dff",
+            color: "#ff570fff",
           })}
         >
           $
