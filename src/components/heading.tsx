@@ -27,7 +27,7 @@ export default component$(({ value, description }: Heading) => {
           fontSize: "48px",
           color: "transparent",
           zIndex: 10,
-          WebkitTextStroke: ".5px #5a5dff",
+          WebkitTextStroke: ".5px #ff5ac5ff",
           opacity: 0,
         })}
         onQVisible$={(e) => {
@@ -67,7 +67,7 @@ export default component$(({ value, description }: Heading) => {
           fontFamily: "heading_ja",
           fontWeight: 900,
           fontSize: "48px",
-          color: "#5A5DFF",
+          color: "#ff5ac5ff",
           zIndex: 0,
           opacity: 0,
         })}

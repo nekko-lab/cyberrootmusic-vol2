@@ -25,7 +25,7 @@ export default component$(() => {
       >
         <span
           class={css({
-            color: "#fff200ff",
+            color: "#ffff00ff",
           })}
         >
           admin@nekko_lab
