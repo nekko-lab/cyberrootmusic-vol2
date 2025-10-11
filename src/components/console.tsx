@@ -25,28 +25,38 @@ export default component$(() => {
       >
         <span
           class={css({
-            color: "#ebdf00ff",
+            color: "#fff200ff",
           })}
         >
           admin@nekko_lab
         </span>
         <span
           class={css({
-            color: "#ff570fff",
+            color: "#ff6fffff",
           })}
         >
           ~/tsudanuma25
         </span>
         <span
           class={css({
-            color: "#ff570fff",
+            color: "#ff6fffff",
           })}
         >
           $
         </span>
-        <span>cat title.vol2.txt</span>
+        <span
+          class={css({
+            color: "#f9f9f9ff",
+          })}
+        >
+          cat title.vol2.txt
+        </span>
       </div>
-      <span>
+      <span
+        class={css({
+          color: "#f9f9f9ff",
+        })}
+      >
         &nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;&nbsp;__&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         &nbsp;/&nbsp;___|&nbsp;&nbsp;&nbsp;_|&nbsp;|__&nbsp;&nbsp;&nbsp;___&nbsp;_&nbsp;__&nbsp;&nbsp;&nbsp;///&nbsp;&nbsp;&nbsp;///\\\&nbsp;&nbsp;|&nbsp;&nbsp;\/&nbsp;&nbsp;|_&nbsp;&nbsp;&nbsp;_&nbsp;___(_)&nbsp;___&nbsp;
