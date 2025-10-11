@@ -3,9 +3,9 @@
 #gradient-canvas {
     width:100%;
     height:100%;
-    --gradient-color-1: #0aa5ed;
-    --gradient-color-2: #1c9dff;
-    --gradient-color-3: #0963ff;
+    --gradient-color-1: #146aff;
+    --gradient-color-2: #0c34d3;
+    --gradient-color-3: #6673ff;
 }
 
 ::-webkit-scrollbar{

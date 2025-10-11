@@ -328,8 +328,8 @@ function normalizeColor(hexCode) {
             presetName: "",
             wireframe: false,
             density: [.006, .01],
-            zoom: 1,
-            rotation: 0,
+            zoom: 2,
+            rotation: 0.5,
             playing: true
         }, 
         document.querySelectorAll("canvas").length < 1 ? console.log("DID NOT LOAD HERO STRIPE CANVAS") : (
