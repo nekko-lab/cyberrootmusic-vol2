@@ -358,6 +358,13 @@ export default component$(() => {
               >
                 千葉工業大学非公認DJサークル DDD
               </p>
+              <p
+                class={css({
+                  marginBottom: 20,
+                })}
+              >
+                千葉工業大学公認サークル ソフトメディア研究会
+              </p>
             </Block>
             {/* <Heading value="Ads" description="広告" />
             <budoux-ja>
