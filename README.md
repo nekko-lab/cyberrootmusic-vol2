@@ -11,7 +11,7 @@ Cyber </> Music (サイバー ルート ミュージック) は、​音楽と�
 
 ### [HomePage](https://numasai2025.nekko-lab.dev/)
 
-<img align="cnter" src="./public/og.png" alt="og.png" title="og.png" width="100%" height="100%">
+<img align="center" src="./public/og.png" alt="og.png" title="og.png" width="100%" height="100%">
 
 ## Develop Stack
 
