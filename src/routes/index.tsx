@@ -4,7 +4,6 @@ import Console from "~/components/console";
 import Header from "~/components/header";
 import Heading from "~/components/heading";
 import { css } from "~/styled-system/css";
-// import { Gradient } from "~/components/gradient.mjs";
 import { TimeTable } from "~/components/timeTable";
 import { Block } from "~/components/block";
 import { Section } from "~/components/section";
