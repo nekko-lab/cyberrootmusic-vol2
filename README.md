@@ -1,15 +1,27 @@
-# Nekko-lab 津田沼祭 76th Web
-## Cyber </> Music
-😎 音楽が​"まわる​"、​ステージが​"まわる​"、​自由に​体を​揺らせる​空間へようこそ！​ 😎  
+<img align="right" src="./public/favicon.png" alt="favicon.png" title="favicon.png" width="100px" height="100px">
+
+# Nekko.lab 津田沼祭 76th Cyber Root Music Homepage
+
+## Cyber </> Music vol.2
+
+😎 音楽と​音楽が​"まざる​"、​人と​人が​"まざる​"、​自由な​音楽の​空間へようこそ！​ 😎  
 Cyber </> Music (サイバー ルート ミュージック) は、​音楽と​観客が​主役に​なれる​DJイベントです。  
 体を​解放して​音楽と​ひとつに​なれる、​そんな​空間を​目指しています。  
-グルーブに​乗って​自由な​ムーブメントで​踊ろう！
+グルーブに​乗って​自由な​ムーブメントで​踊ろう！  
 
-[HomePage](https://numasai2024.nekko-lab.dev/)
+### [HomePage](https://numasai2025.nekko-lab.dev/)
+
+<img align="cnter" src="./public/og.png" alt="og.png" title="og.png" width="100%" height="100%">
 
 ## Develop Stack
+
 - Qwik
 - Vite
+
+## Libraries
+
+- [Granim.js](https://sarcadass.github.io/granim.js/index.html)
+- [Vanta.js](https://www.vantajs.com/)
 
 ## Start dev server
 
