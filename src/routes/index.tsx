@@ -4,7 +4,7 @@ import Console from "~/components/console";
 import Header from "~/components/header";
 import Heading from "~/components/heading";
 import { css } from "~/styled-system/css";
-import { Gradient } from "~/components/gradient.mjs";
+// import { Gradient } from "~/components/gradient.mjs";
 import { TimeTable } from "~/components/timeTable";
 import { Block } from "~/components/block";
 import { Section } from "~/components/section";
@@ -20,9 +20,24 @@ import Character from "./logo2025.jpeg?jsx";
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(async () => {
-    const gradient = new Gradient();
-    gradient.el = document.querySelector("#gradient-canvas");
-    gradient.connect();
+    // Vanta.jsの初期化
+    if (typeof window !== "undefined" && (window as any).VANTA) {
+      (window as any).VANTA.FOG({
+        el: "#vanta-background",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        highlightColor: 0x5fe6,
+        midtoneColor: 0x15c5,
+        lowlightColor: 0x670089,
+        baseColor: 0x32367a,
+        blurFactor: 0.53,
+        speed: 3.0,
+        zoom: 2.0,
+      });
+    }
   });
 
   const base_delay = 0.2;
@@ -31,11 +46,14 @@ export default component$(() => {
     <>
       {/* Word Break */}
       <script src="https://unpkg.com/budoux/bundle/budoux-ja.min.js" />
+      {/* Vanta.js */}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" />
+      <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js" />
       <Header />
 
-      {/* --- background gradient --- */}
-      <canvas
-        id="gradient-canvas"
+      {/* --- background vanta --- */}
+      <div
+        id="vanta-background"
         data-transition-in
         class={css({
           position: "fixed",
@@ -49,7 +67,7 @@ export default component$(() => {
           animate(
             e.detail.target,
             { opacity: [0, 1] },
-            { duration: 1, easing: "ease-in-out", delay: 0.5 },
+            { duration: 1, easing: "ease-in-out", delay: 0.2 },
           );
         }}
       />
