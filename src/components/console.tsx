@@ -114,6 +114,22 @@ export default component$(() => {
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|___/
           <br />
+        </span>
+        <span
+          class={css({
+            position: "relative",
+            display: "block",
+          })}
+          style={{
+            background:
+              "linear-gradient(90deg, #ffffffff, #f4f4f4ff, #f1f1f1ff, #edededff, #d6d6d6ff, #aaaaaaff, #454887ff, #0e085dff, #64698cff, #aaaaaaff, #d6d6d6ff, #edededff, #f1f1f1ff, #f4f4f4ff, #ffffffff)",
+            backgroundClip: "text",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundSize: "300% 100%",
+            animation: "gradient-shift 8s ease infinite",
+          }}
+        >
           <br />
           __&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;&nbsp;U&nbsp;&nbsp;___&nbsp;u&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;
           <br />
