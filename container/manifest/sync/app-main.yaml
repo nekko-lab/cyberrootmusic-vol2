@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: main
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: main
+  template:
+    metadata:
+      labels:
+        app: main
+    spec:
+      containers:
+        - name: main
+          image: "ghcr.io/nekko-lab/main-app:SHA"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: main-svc
+spec:
+  selector:
+    app: main
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

@@ -3,28 +3,18 @@ import type { DjEvent } from "./timeTable";
 
 export const TimeLine: Array<Array<DjEvent>> = [
   [
-    { time: "10:30", dj: "kaigara Project SEKAI" },
-    { time: "11:20", dj: "flight Orangestar DJ" },
-    { time: "12:10", dj: "cyokozai House" },
-    { time: "14:00", dj: "flight flightDJ" },
-    { time: "14:50", dj: "cyokozai Sakanaction" },
-    { time: "15:30", dj: "kaigara VOCALOID" },
+    { time: "15:00 - 15:40", dj: "DJ 01" },
+    { time: "15:40 - 16:20", dj: "DJ 02" },
+    { time: "16:20 - 17:00", dj: "DJ 03" },
+    { time: "17:00 - 17:40", dj: "cyokozai" },
   ],
   [
-    { time: "10:30", dj: "flight flightDJ" },
-    { time: "13:00", dj: "cyokozai Sakanaction" },
-    { time: "14:00", dj: "kaigara VOCALOID" },
-    { time: "14:40", dj: "cyokozai House" },
-    { time: "15:30", dj: "kaigara Project SEKAI" },
-    { time: "16:20", dj: "flight Orangestar DJ" },
-  ],
-  [
-    { time: "12:00", dj: "kaigara Project SEKAI" },
-    { time: "12:50", dj: "flight Orangestar DJ" },
-    { time: "13:40", dj: "cyokozai House" },
-    { time: "14:30", dj: "kaigara VOCALOID" },
-    { time: "15:10", dj: "flight add DJ" },
-    { time: "15:50", dj: "cyokozai Sakanaction and...?" },
+    { time: "12:10 - 12:50", dj: "DJ 05" },
+    { time: "12:50 - 13:30", dj: "DJ 06" },
+    { time: "13:30 - 14:10", dj: "DJ 07" },
+    { time: "14:10 - 14:50", dj: "maki" },
+    { time: "16:00 - 16:40", dj: "DJ 09" },
+    { time: "16:40 - 17:20", dj: "kaigara" },
   ],
 ];
 
@@ -58,7 +48,7 @@ export const Caution: Array<ListBlock> = [
   },
   { Content: "公序良俗に反する行為は禁止です。" },
   { Content: "法律に抵触する行為は禁止です。" },
-  { Content: "当日のDJは全員初心者です。優しくして頂けると幸いです^^;" },
+  { Content: "初心者のDJもいます。優しくして頂けると幸いです^^;" },
   {
     Content:
       "もし、途中でDJの音源が止まったら、それは乾杯の合図です（笑）皆さん一緒に乾杯しましょう！",

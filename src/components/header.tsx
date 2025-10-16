@@ -69,9 +69,9 @@ export default component$(() => {
             <li>
               <HeaderLink value="SpecialThanks" />
             </li>
-            <li>
+            {/* <li>
               <HeaderLink value="Ads" />
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>
@@ -260,12 +260,12 @@ export default component$(() => {
                   <HeaderLink value="SpecialThanks" />
                 </span>
               </li>
-              <li>
+              {/* <li>
                 <span></span>
                 <span>
                   <HeaderLink value="Ads" />
                 </span>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>

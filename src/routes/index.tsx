@@ -4,7 +4,6 @@ import Console from "~/components/console";
 import Header from "~/components/header";
 import Heading from "~/components/heading";
 import { css } from "~/styled-system/css";
-import { Gradient } from "~/components/gradient.mjs";
 import { TimeTable } from "~/components/timeTable";
 import { Block } from "~/components/block";
 import { Section } from "~/components/section";
@@ -13,29 +12,47 @@ import { Caution, TimeLine } from "~/components/data";
 import Footer from "~/components/footer";
 import { animate } from "motion";
 import Map from "./map.png?jsx";
-import Character from "./character.png?jsx";
-import Nekoreru_menu from "./nekoteru_menu.jpg?jsx";
-import Nekoteru from "./nekoteru.jpg?jsx";
+import Character from "./logo2025.jpeg?jsx";
+// import Nekoreru_menu from "./nekoteru_menu.jpg?jsx";
+// import Nekoteru from "./nekoteru.jpg?jsx";
 
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(async () => {
-    const gradient = new Gradient();
-    gradient.el = document.querySelector("#gradient-canvas");
-    gradient.connect();
+    // Vanta.jsの初期化
+    if (typeof window !== "undefined" && (window as any).VANTA) {
+      (window as any).VANTA.FOG({
+        el: "#vanta-background",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        highlightColor: 0x5fe6,
+        midtoneColor: 0x15c5,
+        lowlightColor: 0x670089,
+        baseColor: 0x32367a,
+        blurFactor: 0.53,
+        speed: 3.0,
+        zoom: 2.0,
+      });
+    }
   });
 
-  const base_delay = 0.4;
+  const base_delay = 0.2;
 
   return (
     <>
       {/* Word Break */}
       <script src="https://unpkg.com/budoux/bundle/budoux-ja.min.js" />
+      {/* Vanta.js */}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" />
+      <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js" />
       <Header />
 
-      {/* --- background gradient --- */}
-      <canvas
-        id="gradient-canvas"
+      {/* --- background vanta --- */}
+      <div
+        id="vanta-background"
         data-transition-in
         class={css({
           position: "fixed",
@@ -49,7 +66,7 @@ export default component$(() => {
           animate(
             e.detail.target,
             { opacity: [0, 1] },
-            { duration: 1, easing: "ease-in-out", delay: 0.5 },
+            { duration: 1, easing: "ease-in-out", delay: 0.2 },
           );
         }}
       />
@@ -106,7 +123,7 @@ export default component$(() => {
             })}
           >
             <span>Cyber &lt;/&gt; Music</span>
-            <span>November. 23-25</span>
+            <span>November. 22-23</span>
             <span>at CIT Tsudanuma Campus</span>
             <span
               class={css({
@@ -119,7 +136,7 @@ export default component$(() => {
               Nekko Lab
             </span>
           </div>
-          <div>2024 &copy; Nekko Lab</div>
+          <div>2025 &copy; Nekko Lab</div>
         </div>
         <div
           class={css({
@@ -143,7 +160,7 @@ export default component$(() => {
                   {/* Word Break */}
                   <budoux-ja>
                     😎
-                    音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！
+                    音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！
                     😎
                     <br />
                     Cyber &lt;/&gt; Music (サイバー ルート ミュージック)
@@ -158,7 +175,7 @@ export default component$(() => {
                 <Block Title="About us">
                   {/* Word Break */}
                   <budoux-ja>
-                    ネッコ研は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
+                    ネットワークコンテンツ研究会は、デジタルコンテンツやシステムを製作する創作×技術系サークルです。
                     <br />
                     現在、以下のチームが活動中！
                   </budoux-ja>
@@ -217,8 +234,8 @@ export default component$(() => {
                     e.detail.target,
                     { opacity: 1, transform: "translateX(0px)" },
                     {
-                      duration: 0.5,
-                      delay: base_delay + 0.5,
+                      duration: 0.3,
+                      delay: base_delay + 0.4,
                       easing: "ease-in-out",
                     },
                   );
@@ -227,12 +244,13 @@ export default component$(() => {
                 <Character
                   class={css({
                     margin: { lg: 0, base: "auto" },
-                    height: 500,
+                    height: "auto",
+                    maxHeight: 500,
                     width: "auto",
+                    maxWidth: 500,
                   })}
-                  alt="キャラクター"
+                  alt="ロゴ2025"
                 />
-                <p>illusted by 菓子工船</p>
               </div>
             </div>
           </Section>
@@ -266,7 +284,7 @@ export default component$(() => {
                   >
                     <TimeTable
                       events={value}
-                      header={`day ${index + 1} 11/${23 + index}`}
+                      header={`day ${1 + index} 11/${22 + index}`}
                     />
                   </div>
                 );
@@ -349,16 +367,23 @@ export default component$(() => {
           {/* --- Venue --- */}
           <Section>
             <Heading value="SpecialThanks" description="協力" />
-            <Block Title="ステージ共同制作">
+            <Block Title="外部協力">
               <p
                 class={css({
                   marginBottom: 20,
                 })}
               >
-                けんとけん かずま
+                千葉工業大学非公認DJサークル DDD
+              </p>
+              <p
+                class={css({
+                  marginBottom: 20,
+                })}
+              >
+                千葉工業大学公認サークル ソフトメディア研究会
               </p>
             </Block>
-            <Heading value="Ads" description="広告" />
+            {/* <Heading value="Ads" description="広告" />
             <budoux-ja>
               <div
                 class={css({
@@ -401,7 +426,7 @@ export default component$(() => {
                   />
                 </div>
               </div>
-            </budoux-ja>
+            </budoux-ja> */}
           </Section>
         </div>
       </main>
@@ -416,7 +441,7 @@ export const head: DocumentHead = {
     {
       name: "description",
       content:
-        '音楽が"まわる"、ステージが"まわる"、自由に体を揺らせる空間へようこそ！\nCyber </> Music (サイバー ルート ミュージック) は、音楽と観客が主役になれるDJイベントです。',
+        '音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！\nCyber </> Music (サイバー ルート ミュージック) は、音楽と観客が主役になれるDJイベントです。',
     },
   ],
 };
