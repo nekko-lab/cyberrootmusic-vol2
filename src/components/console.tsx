@@ -87,24 +87,20 @@ export default component$(() => {
           minHeight: "150px",
         })}
       >
-        <canvas
-          ref={canvasRef}
-          class={css({
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            display: "block",
-          })}
-        />
         <span
           class={css({
-            color: "#f9f9f9ff",
             position: "relative",
             display: "block",
-            mixBlendMode: "difference",
           })}
+          style={{
+            background:
+              "linear-gradient(90deg, #ffffffff, #f4f4f4ff, #f1f1f1ff, #edededff, #d6d6d6ff, #aaaaaaff, #454887ff, #0e085dff, #64698cff, #aaaaaaff, #d6d6d6ff, #edededff, #f1f1f1ff, #f4f4f4ff, #ffffffff)",
+            backgroundClip: "text",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundSize: "400% 100%",
+            animation: "gradient-shift 8s ease infinite",
+          }}
         >
           &nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;&nbsp;__&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <br />
@@ -117,6 +113,21 @@ export default component$(() => {
           &nbsp;\____\__,&nbsp;|_.__/&nbsp;\___|_|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\\///&nbsp;&nbsp;&nbsp;///&nbsp;&nbsp;|_|&nbsp;&nbsp;|_|\__,_|___/_|\___|
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|___/
+          <br />
+          <br />
+          __&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;&nbsp;U&nbsp;&nbsp;___&nbsp;u&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;
+          <br />
+          \&nbsp;\&nbsp;&nbsp;&nbsp;/"/u&nbsp;&nbsp;&nbsp;&nbsp;\/"_&nbsp;\/&nbsp;&nbsp;|"|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|___"\&nbsp;&nbsp;
+          <br />
+          &nbsp;\&nbsp;\&nbsp;/&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|&nbsp;|&nbsp;|U&nbsp;|&nbsp;|&nbsp;u&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U&nbsp;__)&nbsp;|&nbsp;
+          <br />
+          &nbsp;/\&nbsp;V&nbsp;/_,-.-,_|&nbsp;|_|&nbsp;|&nbsp;\|&nbsp;|/__&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;\/&nbsp;__/&nbsp;\
+          <br />
+          U&nbsp;&nbsp;\_/-(_/&nbsp;\_)-\___/&nbsp;&nbsp;&nbsp;|_____|&nbsp;(_)&nbsp;|_____|u
+          <br />
+          &nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;\\&nbsp;&nbsp;
+          <br />
+          &nbsp;(__)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(__)&nbsp;&nbsp;&nbsp;(__)(__)&nbsp;&nbsp;&nbsp;&nbsp;(__)(__)
         </span>
       </div>
     </div>
