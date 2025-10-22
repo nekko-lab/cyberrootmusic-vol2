@@ -1,36 +1,8 @@
-import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import { css } from "~/styled-system/css";
 import { animate } from "motion";
-import Granim from "granim";
 
 export default component$(() => {
-  const canvasRef = useSignal<HTMLCanvasElement>();
-
-  // eslint-disable-next-line qwik/no-use-visible-task
-  useVisibleTask$(({ track }) => {
-    track(() => canvasRef.value);
-
-    if (canvasRef.value) {
-      new Granim({
-        element: canvasRef.value,
-        direction: "left-right",
-        states: {
-          "default-state": {
-            gradients: [
-              ["#EB3349", "#F45C43"],
-              ["#FF8008", "#FFC837"],
-              ["#4CB8C4", "#3CD3AD"],
-              ["#24C6DC", "#514A9D"],
-              ["#FF512F", "#DD2476"],
-              ["#DA22FF", "#9733EE"],
-            ],
-            transitionSpeed: 2000,
-          },
-        },
-      });
-    }
-  });
-
   return (
     <div
       class={css({
