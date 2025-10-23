@@ -3,18 +3,18 @@ import type { DjEvent } from "./timeTable";
 
 export const TimeLine: Array<Array<DjEvent>> = [
   [
-    { time: "15:00 - 15:40", dj: "écl4ir" },
-    { time: "15:40 - 16:20", dj: "taiyou" },
-    { time: "16:20 - 17:00", dj: "TOAH-Χ" },
-    { time: "17:00 - 17:40", dj: "cyokozai" },
+    { time: "15:00\n15:40", dj: "écl4ir" },
+    { time: "15:40\n16:20", dj: "taiyou" },
+    { time: "16:20\n17:00", dj: "TOAH-Χ" },
+    { time: "17:00\n17:40", dj: "cyokozai" },
   ],
   [
-    { time: "12:10 - 12:50", dj: "maki" },
-    { time: "12:50 - 13:30", dj: "cyokozai" },
-    { time: "13:30 - 14:10", dj: "C-joker" },
-    { time: "14:10 - 14:50", dj: "46la" },
-    { time: "16:00 - 16:40", dj: "Astral" },
-    { time: "16:40 - 17:20", dj: "kaigara" },
+    { time: "12:10\n12:50", dj: "maki" },
+    { time: "12:50\n13:30", dj: "cyokozai" },
+    { time: "13:30\n14:10", dj: "C-joker" },
+    { time: "14:10\n14:50", dj: "46la" },
+    { time: "16:00\n16:40", dj: "Astral" },
+    { time: "16:40\n17:20", dj: "kaigara" },
   ],
 ];
 
