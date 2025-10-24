@@ -47,7 +47,6 @@ npm run dev
 
 ## Static Site Generator (Node.js)
 
-
 1. Panda CSSのstyle systemを生成（初回または設定変更時）
 
     ```shell
