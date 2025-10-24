@@ -9,18 +9,33 @@ Cyber </> Music (サイバー ルート ミュージック) は、​音楽と�
 体を​解放して​音楽と​ひとつに​なれる、​そんな​空間を​目指しています。  
 グルーブに​乗って​自由な​ムーブメントで​踊ろう！  
 
-### [HomePage](https://numasai2025.nekko-lab.dev/)
+### [HomePage](https://numasai2025.nekko-lab.dev/dj/)
 
 <img align="center" src="./public/og.png" alt="og.png" title="og.png" width="100%" height="100%">
 
 ## Develop Stack
 
-- Qwik
-- Vite
+| ツール | バージョン | 概要 |
+|--------|-----------|------|
+| Node.js | v22.16.0 | JavaScript実行環境 |
+| npm | 10.9.2 | パッケージマネージャー |
+| Qwik | ^1.8.0 | フロントエンドフレームワーク |
+| Qwik City | ^1.8.0 | ファイルベースルーティング |
+| Vite | ^5.4.8 | ビルドツール・開発サーバー |
+| TypeScript | 5.4.5 | 型付きJavaScript |
+| Panda CSS | ^0.36.1 | CSSフレームワーク |
+
+## Product Stack
+
+| ツール | バージョン | 概要 |
+|--------|-----------|------|
+| nginx | 1.29.2 |  |
+| npm | v11.6.2 |  |
+| Node.js | 25.0.0 |  |
 
 ## Libraries
 
-- [Granim.js](https://sarcadass.github.io/granim.js/index.html)
+- [Granim.js](https://sarcadass.github.io/granim.js/index.html/)
 - [Vanta.js](https://www.vantajs.com/)
 
 ## Start dev server
@@ -32,13 +47,21 @@ npm run dev
 
 ## Static Site Generator (Node.js)
 
-```shell
-# 1. Panda CSSのstyle systemを生成（初回または設定変更時）
-npx panda codegen
 
-# 2. クライアントビルド
-npm run build.client
+1. Panda CSSのstyle systemを生成（初回または設定変更時）
 
-# 3. サーバービルド
-npm run build.server
-```
+    ```shell
+    npx panda codegen
+    ```
+
+2. クライアントビルド
+
+    ```shell
+    npm run build.client
+    ```
+
+3. サーバービルド
+
+    ```shell
+    npm run build.server
+    ```

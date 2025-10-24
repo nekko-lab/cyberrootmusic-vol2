@@ -1,4 +1,4 @@
-ARG NODE_VERSION=22.11.0
+ARG NODE_VERSION=25.0.0
 
 ################################################################################
 # Use node image for base image for all stages.
@@ -34,7 +34,7 @@ RUN npm run build
 # Create a new stage to run the application with minimal runtime dependencies
 # where the necessary files are copied from the build stage.
 #FROM base as final
-FROM nginx:1.26.2
+FROM nginx:1.29.2
 
 # Use production node environment by default.
 #ENV NODE_ENV production
@@ -48,9 +48,9 @@ FROM nginx:1.26.2
 
 # Copy the production dependencies from the deps stage and also
 # the built application from the build stage into the image.
-#COPY --from=deps /usr/src/app/node_modules ./node_modules
+COPY --from=deps /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
-#COPY --from=build /usr/src/app/server ./server
+COPY --from=build /usr/src/app/server ./server
 
 # Expose the port that the application listens on.
 #EXPOSE 3000
