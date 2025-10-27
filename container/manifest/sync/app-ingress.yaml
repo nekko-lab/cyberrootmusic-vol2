@@ -9,7 +9,7 @@ spec:
   - host: "numasai25.nekko-lab.dev"
     http:
       paths:
-      - path: /
+      - path: /dj
         pathType: Prefix
         backend:
           service:
