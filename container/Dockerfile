@@ -38,7 +38,7 @@ FROM nginx:1.29.2
 
 # Use production node environment by default.
 #ENV NODE_ENV production
-#ENV ORIGIN https://numasai2024.nekko-lab.dev
+#ENV ORIGIN https://numasai2025.nekko-lab.dev/dj
 
 # Run the application as a non-root user.
 #USER node
