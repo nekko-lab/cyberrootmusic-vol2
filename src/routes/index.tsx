@@ -436,7 +436,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Cyber </> Music by Nekko Lab",
+  title: "Cyber </> Music vol.2 by Nekko Lab",
   meta: [
     {
       name: "description",
