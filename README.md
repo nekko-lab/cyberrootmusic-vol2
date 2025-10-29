@@ -64,3 +64,15 @@ npm run dev
     ```shell
     npm run build.server
     ```
+
+## Build image
+
+```shell
+docker build -f container/Dockerfile -t numasai2025-crm . 
+```
+
+## Run container
+
+```shell
+docker run -d -p 80:8080 numasai2025-crm
+```
