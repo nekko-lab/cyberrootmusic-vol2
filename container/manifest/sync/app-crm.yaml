@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: cyber_root_music
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: cyber_root_music
@@ -16,15 +16,10 @@ spec:
       containers:
         - name: cyber_root_music
           image: "ghcr.io/nekko-lab/cyber_root_music-app:SHA"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: cyber_root_music-svc
-spec:
-  selector:
-    app: cyber_root_music
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+          resources:
+            limits:
+              memory: "1024Mi"
+              cpu: "1"
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
