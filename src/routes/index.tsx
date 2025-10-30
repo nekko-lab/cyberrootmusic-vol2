@@ -367,20 +367,29 @@ export default component$(() => {
           {/* --- Venue --- */}
           <Section>
             <Heading value="SpecialThanks" description="協力" />
-            <Block Title="外部協力">
+            <Block Title="D.D.D">
               <p
                 class={css({
                   marginBottom: 20,
                 })}
               >
-                千葉工業大学非公認DJサークル DDD
+                千葉工大非公認のインカレdjサークル D.D.D🎧
+                毎週月曜と木曜の16時から19時まで練習会を開催！
+                定期イベントも開催しています🙈
+                メンバー募集中ですので音楽好きな方、DJやってみたい方お待ちしてます！
               </p>
+            </Block>
+            <Block Title="千葉工業大学文化会所属ソフトメディア研究会">
               <p
                 class={css({
                   marginBottom: 20,
                 })}
               >
-                千葉工業大学公認サークル ソフトメディア研究会
+                ソフトメディア研究会はパソコンを中心に創作活動を行うサークルです。
+                プログラム班、マルチメディア班、DTM班の3班で活動しています。
+                大学で開催される文化の祭典と津田沼祭には各自が作品を出品します。
+                ソフメ/千葉工大 デジゲー博/M3/コミティアなどに出展！
+                連絡はDMまで！
               </p>
             </Block>
             {/* <Heading value="Ads" description="広告" />
