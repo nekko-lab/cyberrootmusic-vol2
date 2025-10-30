@@ -10,7 +10,7 @@ export const TimeLine: Array<Array<DjEvent>> = [
   ],
   [
     { time: "12:10\n12:50", dj: "maki" },
-    { time: "12:50\n13:30", dj: "cyokozai" },
+    { time: "12:50\n13:30", dj: "公理" },
     { time: "13:30\n14:10", dj: "C-joker" },
     { time: "14:10\n14:50", dj: "46la" },
     { time: "16:00\n16:40", dj: "Astral" },
