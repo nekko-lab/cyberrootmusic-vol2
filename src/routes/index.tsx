@@ -371,110 +371,83 @@ export default component$(() => {
             <Block Title="D.D.D">
               <p
                 class={css({
-                  marginBottom: 20,
+                  marginBottom: 10,
                 })}
               >
                 千葉工大非公認のインカレdjサークル D.D.D🎧
+                <br />
                 毎週月曜と木曜の16時から19時まで練習会を開催！
+                <br />
                 定期イベントも開催しています🙈
+                <br />
                 メンバー募集中ですので音楽好きな方、DJやってみたい方お待ちしてます！
               </p>
-              <HStack gap="4" marginTop="4">
+              <HStack gap="6" marginTop="1" marginBottom="3">
                 <a
-                  href="https://twitter.com/ddd_cit"
+                  href="https://x.com/dillydallydude"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="https://abs.twimg.com/responsive-web/client-web/icon-svg.ea5ff4aa.svg"
+                    src="https://abs.twimg.com/responsive-web/client-web/icon-ios.77d25eba.png"
                     alt="X"
-                    width="24"
-                    height="24"
+                    width="56"
+                    height="56"
                   />
                 </a>
                 <a
-                  href="https://www.instagram.com/ddd.cit/"
+                  href="https://www.instagram.com/d.d.d_dilly_dally_dude/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="https://static.cdninstagram.com/rsrc.php/v4/yI/r/VsNE-OHk_8a.png"
+                    src="https://static.cdninstagram.com/rsrc.php/v4/yB/r/-7Z_RkdLJUX.png"
                     alt="Instagram"
-                    width="24"
-                    height="24"
+                    width="56"
+                    height="56"
                   />
-                </a>
-                <a
-                  href="https://www.ddd-cit.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M9 17H7A5 5 0 0 1 7 7h2" />
-                    <path d="M15 7h2a5 5 0 1 1 0 10h-2" />
-                    <line x1="8" x2="16" y1="12" y2="12" />
-                  </svg>
                 </a>
               </HStack>
+              <br />
             </Block>
             <Block Title="千葉工業大学文化会所属ソフトメディア研究会">
               <p
                 class={css({
-                  marginBottom: 20,
+                  marginBottom: 10,
                 })}
               >
                 ソフトメディア研究会はパソコンを中心に創作活動を行うサークルです。
-                プログラム班、マルチメディア班、DTM班の3班で活動しています。
-                大学で開催される文化の祭典と津田沼祭には各自が作品を出品します。
-                ソフメ/千葉工大 デジゲー博/M3/コミティアなどに出展！
-                連絡はDMまで！
                 <br />
-                当日は、部員が制作した楽曲の展示や、一部楽曲のデモプレイが可能なスペースをご用意しております。部員一同、皆様のご来場を心よりお待ちしております。
+                プログラム班、マルチメディア班、DTM班の3班で活動しています。
+                <br />
+                大学で開催される文化の祭典と津田沼祭には各自が作品を出品します。
+                <br />
+                ソフメ/千葉工大 デジゲー博/M3/コミティアなどに出展！
+                <br />
+                連絡はDMまで！
               </p>
-              <HStack gap="4" marginTop="4">
+              <HStack gap="6" marginTop="1" marginBottom="3">
                 <a
-                  href="https://twitter.com/smc_cit"
+                  href="https://x.com/cit_sofume"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="https://abs.twimg.com/responsive-web/client-web/icon-svg.ea5ff4aa.svg"
+                    src="https://abs.twimg.com/responsive-web/client-web/icon-ios.77d25eba.png"
                     alt="X"
-                    width="24"
-                    height="24"
+                    width="56"
+                    height="56"
                   />
                 </a>
                 <a
-                  href="https://www.instagram.com/smc.cit/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://static.cdninstagram.com/rsrc.php/v4/yI/r/VsNE-OHk_8a.png"
-                    alt="Instagram"
-                    width="24"
-                    height="24"
-                  />
-                </a>
-                <a
-                  href="https://smc-cit.net/"
+                  href="https://softmedia.sakura.ne.jp/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="56"
+                    height="56"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
