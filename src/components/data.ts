@@ -14,7 +14,7 @@ export const TimeLine: Array<Array<DjEvent>> = [
     { time: "13:30\n14:10", dj: "C-joker" },
     { time: "14:10\n14:50", dj: "46la" },
     { time: "16:00\n16:40", dj: "Astral" },
-    { time: "16:40\n17:20", dj: "kaigara" },
+    { time: "16:40\n17:20", dj: "かいがら" },
   ],
 ];
 
