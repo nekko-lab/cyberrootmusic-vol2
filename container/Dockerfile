@@ -48,9 +48,9 @@ COPY --from=build /usr/src/app/container/nginx/conf.d/default.conf /etc/nginx/co
 #COPY package.json .
 
 # Copy the built application from the build stage into the image.
-COPY --from=build /usr/src/app/dist/dj-live /usr/share/nginx/html
-
-#ENV NODE_ENV production
+COPY --from=deps /usr/src/app/node_modules ./node_modules
+COPY --from=build /usr/src/app/dist /usr/share/nginx/html
+COPY --from=build /usr/src/app/server ./server
 
 # Run the application AS a non-root user.
 #USER node
