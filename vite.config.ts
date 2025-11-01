@@ -21,7 +21,6 @@ errorOnDuplicatesPkgDeps(devDependencies, dependencies);
 
 export default defineConfig(({ command, mode }): UserConfig => {
   return {
-    base: "/dj-live/",
     plugins: [
       macroPlugin({ preset: "pandacss" }),
       qwikCity(),

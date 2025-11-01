@@ -12,7 +12,7 @@ export default extendConfig(baseConfig, () => {
     },
     plugins: [
       staticAdapter({
-        origin: "https://numasai25.nekko-lab.dev/dj-live",
+        origin: "https://numasai25.nekko-lab.dev",
       }),
     ],
   };
