@@ -12,9 +12,13 @@ export const RouterHead = component$(() => {
     <>
       <title>{head.title}</title>
 
-      <link rel="canonical" href="https://numasai2025.nekko-lab.dev/" />
+      <link rel="canonical" href="https://numasai25.nekko-lab.dev/dj-live/" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" href="/favicon.png" />
+      <meta
+        name="description"
+        content="Nekko Lab 千葉工業大学 津田沼際 76th | DJ Live イベント開催中！最新の音楽とテクノロジーが融合するライブパフォーマンスをお楽しみください。"
+      />
+      <link rel="icon" type="image/png" href="favicon.png" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
@@ -26,18 +30,32 @@ export const RouterHead = component$(() => {
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,900;1,14..32,900&family=Libre+Barcode+39+Extended&family=Zen+Kaku+Gothic+New:wght@900&display=swap"
         rel="stylesheet"
       />
+      <meta property="og:site_name" content="Nekko Lab" />
       <meta property="og:title" content="Nekko Lab | 津田沼際 76th" />
-      <meta property="og:url" content="https://numasai2025.nekko-lab.dev/" />
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:url"
+        content="https://numasai25.nekko-lab.dev/dj-live/"
+      />
       <meta
         property="og:image"
-        content="https://numasai2025.nekko-lab.dev/og.png"
+        content="https://numasai25.nekko-lab.dev/dj-live/og.png"
       />
       <meta
         property="og:description"
-        content="Nekko Lab 千葉工業大学 津田沼際 76th ホームページ"
+        content="Nekko Lab 千葉工業大学 津田沼際 76th | DJ Live イベント開催中！最新の音楽とテクノロジーが融合するライブパフォーマンスをお楽しみください。"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@nekko_lab" />
+      <meta name="twitter:title" content="Nekko Lab | 津田沼際 76th" />
+      <meta
+        name="twitter:description"
+        content="Nekko Lab 千葉工業大学 津田沼際 76th | DJ Live イベント開催中！"
+      />
+      <meta
+        name="twitter:image"
+        content="https://numasai2025.nekko-lab.dev/dj-live/og.png"
+      />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />
