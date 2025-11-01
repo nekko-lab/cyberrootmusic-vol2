@@ -38,6 +38,9 @@ FROM nginx:1.29.2
 # Set working directory
 WORKDIR /usr/src/app
 
+# Remove default nginx configs
+RUN rm -rf /etc/nginx/conf.d/*
+
 # Copy NGINX config
 COPY --from=build /usr/src/app/container/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
@@ -45,7 +48,7 @@ COPY --from=build /usr/src/app/container/nginx/conf.d/default.conf /etc/nginx/co
 #COPY package.json .
 
 # Copy the built application from the build stage into the image.
-COPY --from=build /usr/src/app/dist /usr/share/nginx/html
+COPY --from=build /usr/src/app/dist/dj-live /usr/share/nginx/html
 
 #ENV NODE_ENV production
 
