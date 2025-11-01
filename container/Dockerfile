@@ -33,10 +33,38 @@ RUN npm run build
 ################################################################################
 # Create a new stage to run the application with minimal runtime dependencies
 # where the necessary files are copied from the build stage.
-#FROM base AS final
 FROM nginx:1.29.2
 
-# Use production node environment by default.
+# Install Node.js (LTS version)
+RUN apt-get update && apt-get install -y curl ca-certificates && \
+    curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Copy NGINX config
+COPY --from=build /usr/src/app/container/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+
+# Copy built application and dependencies
+COPY --from=build /usr/src/app/build ./build
+COPY --from=build /usr/src/app/server ./server
+COPY --from=build /usr/src/app/node_modules ./node_modules
+COPY --from=build /usr/src/app/package.json ./package.json
+
+# Expose port 80 for NGINX
+EXPOSE 80
+
+# Create a startup script to run both node server and nginx
+RUN echo "#!/bin/sh\n\
+# Start the Node.js server in the background\n\
+node server/entry.ssr.js &\n\
+# Start NGINX in the foreground\n\
+nginx -g 'daemon off;'\n\
+" > /usr/src/app/start.sh && chmod +x /usr/src/app/start.sh
+
+CMD ["/usr/src/app/start.sh"]
+
 #ENV NODE_ENV production
 #ENV ORIGIN https://numasai2025.nekko-lab.dev/dj
 
