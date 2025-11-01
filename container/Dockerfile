@@ -33,24 +33,27 @@ RUN npm run build
 ################################################################################
 # Create a new stage to run the application with minimal runtime dependencies
 # where the necessary files are copied from the build stage.
-#FROM base AS final
 FROM nginx:1.29.2
 
-# Use production node environment by default.
+# Set working directory
+WORKDIR /usr/src/app
+
+# Copy NGINX config
+COPY --from=build /usr/src/app/container/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+
+# Copy package.json so that package manager commands can be used.
+#COPY package.json .
+
+# Copy the built application from the build stage into the image.
+COPY --from=build /usr/src/app/dist /usr/share/nginx/html
+
 #ENV NODE_ENV production
-#ENV ORIGIN https://numasai2025.nekko-lab.dev/dj
 
 # Run the application AS a non-root user.
 #USER node
 
 # Copy package.json so that package manager commands can be used.
 #COPY package.json .
-
-# Copy the production dependencies from the deps stage and also
-# the built application from the build stage into the image.
-COPY --from=deps /usr/src/app/node_modules ./node_modules
-COPY --from=build /usr/src/app/dist /usr/share/nginx/html
-COPY --from=build /usr/src/app/server ./server
 
 # Expose the port that the application listens on.
 #EXPOSE 3000
