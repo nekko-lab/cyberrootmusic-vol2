@@ -74,5 +74,5 @@ docker build -f container/Dockerfile -t numasai2025-crm .
 ## Run container
 
 ```shell
-docker run -d -p 80:8080 numasai2025-crm
+docker run -p 8080:80 cyberrootmusic-vol2
 ```
