@@ -11,14 +11,11 @@ WORKDIR /usr/src/app
 # Create a stage for installing production dependencies.
 FROM base AS deps
 
-# Download dependencies AS a separate step to take advantage of Docker's caching.
-# Leverage a cache mount to /root/.yarn to speed up subsequent builds.
-# Leverage bind mounts to package.json and yarn.lock to avoid having to copy them
-# into this layer.
-RUN --mount=type=bind,source=package.json,target=package.json \
-#   --mount=type=bind,source=yarn.lock,target=yarn.lock \
-#   --mount=type=cache,target=/root/.yarn \
-   npm install --frozen-lockfile
+# Copy package files
+COPY package.json package-lock.json* ./
+
+# Install all dependencies (including devDependencies needed for build)
+RUN npm ci
 
 ################################################################################
 # Create a stage for building the application.
@@ -29,6 +26,9 @@ COPY . .
 
 # Run the build script.
 RUN npm run build
+
+# publicディレクトリの静的ファイルをdistにコピー
+RUN cp -r public/* dist/ || true
 
 ################################################################################
 # Create a new stage to run the application with minimal runtime dependencies
