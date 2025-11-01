@@ -14,9 +14,10 @@ jobs:
       REGISTRY: ghcr.io
       IMAGE: "ghcr.io/${{ github.repository }}:${{ github.sha }}" # nekko-lab/cyberrootmusic-vol2:SHA
       WORK_DIR: ""
+      MANIFEST_REPO_PATH: "./manifest-repo"
 
     permissions:
-      contents: write
+      contents: read
       packages: write
 
     steps:
@@ -37,8 +38,21 @@ jobs:
           file: ./container/Dockerfile
           push: true
           tags: ${{ env.IMAGE }}
+
+      - name: Checkout Manifest Repo (tsudanuma25-hp)
+        uses: actions/checkout@v4
+        with:
+          repository: nekko-lab/tsudanuma25-hp
+          token: ${{ secrets.MANIFEST_REPO_PAT }}
+          path: ${{ env.MANIFEST_REPO_PATH }}
+      
+      - name: Change docker image
+        uses: mikefarah/yq@master
+        with:
+          cmd: yq '.spec.template.spec.containers[0].image = env(IMAGE)' -i ${{ env.MANIFEST_REPO_PATH }}/container/manifest/sync/cyberrootmusic-deployment.yaml
           
-      - name: Commit
+      - name: Commit to Manifest Repo
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "ci(fire): Update image to ${{ github.sha }}"
+          repository: ${{ env.MANIFEST_REPO_PATH }}
+          commit_message: "ci(cyberrootmusic): Update image to ${{ github.sha }}"
