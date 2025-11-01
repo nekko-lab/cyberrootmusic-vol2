@@ -15,6 +15,7 @@ import Map from "./map.png?jsx";
 import Character from "./logo2025.jpeg?jsx";
 // import Nekoreru_menu from "./nekoteru_menu.jpg?jsx";
 // import Nekoteru from "./nekoteru.jpg?jsx";
+import { HStack } from "~/styled-system/jsx";
 
 export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -164,7 +165,7 @@ export default component$(() => {
                     😎
                     <br />
                     Cyber &lt;/&gt; Music (サイバー ルート ミュージック)
-                    は、音楽と観客が主役になれるDJイベントです。
+                    は、音楽とみんなが主役になれるDJイベントです。
                     <br />
                     体を解放して音楽とひとつになれる、そんな空間を目指しています。
                     <br />
@@ -367,21 +368,99 @@ export default component$(() => {
           {/* --- Venue --- */}
           <Section>
             <Heading value="SpecialThanks" description="協力" />
-            <Block Title="外部協力">
+            <Block Title="D.D.D">
               <p
                 class={css({
-                  marginBottom: 20,
+                  marginBottom: 10,
                 })}
               >
-                千葉工業大学非公認DJサークル DDD
+                千葉工大非公認のインカレdjサークル D.D.D🎧
+                <br />
+                毎週月曜と木曜の16時から19時まで練習会を開催！
+                <br />
+                定期イベントも開催しています🙈
+                <br />
+                メンバー募集中ですので音楽好きな方、DJやってみたい方お待ちしてます！
               </p>
+              <HStack gap="6" marginTop="1" marginBottom="3">
+                <a
+                  href="https://x.com/dillydallydude"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://abs.twimg.com/responsive-web/client-web/icon-ios.77d25eba.png"
+                    alt="X"
+                    width="56"
+                    height="56"
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com/d.d.d_dilly_dally_dude/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://static.cdninstagram.com/rsrc.php/v4/yB/r/-7Z_RkdLJUX.png"
+                    alt="Instagram"
+                    width="56"
+                    height="56"
+                  />
+                </a>
+              </HStack>
+              <br />
+            </Block>
+            <Block Title="千葉工業大学文化会所属ソフトメディア研究会">
               <p
                 class={css({
-                  marginBottom: 20,
+                  marginBottom: 10,
                 })}
               >
-                千葉工業大学公認サークル ソフトメディア研究会
+                ソフトメディア研究会はパソコンを中心に創作活動を行うサークルです。
+                <br />
+                プログラム班、マルチメディア班、DTM班の3班で活動しています。
+                <br />
+                大学で開催される文化の祭典と津田沼祭には各自が作品を出品します。
+                <br />
+                ソフメ/千葉工大 デジゲー博/M3/コミティアなどに出展！
+                <br />
+                連絡はDMまで！
               </p>
+              <HStack gap="6" marginTop="1" marginBottom="3">
+                <a
+                  href="https://x.com/cit_sofume"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://abs.twimg.com/responsive-web/client-web/icon-ios.77d25eba.png"
+                    alt="X"
+                    width="56"
+                    height="56"
+                  />
+                </a>
+                <a
+                  href="https://softmedia.sakura.ne.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="56"
+                    height="56"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M9 17H7A5 5 0 0 1 7 7h2" />
+                    <path d="M15 7h2a5 5 0 1 1 0 10h-2" />
+                    <line x1="8" x2="16" y1="12" y2="12" />
+                  </svg>
+                </a>
+              </HStack>
             </Block>
             {/* <Heading value="Ads" description="広告" />
             <budoux-ja>
@@ -436,12 +515,12 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Cyber </> Music by Nekko Lab",
+  title: "Cyber </> Music vol.2 by Nekko Lab",
   meta: [
     {
       name: "description",
       content:
-        '音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！\nCyber </> Music (サイバー ルート ミュージック) は、音楽と観客が主役になれるDJイベントです。',
+        '音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！\nCyber </> Music (サイバー ルート ミュージック) は、音楽とみんなが主役になれるDJイベントです。',
     },
   ],
 };
