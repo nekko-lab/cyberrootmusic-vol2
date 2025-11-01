@@ -45,7 +45,8 @@ RUN rm -rf /etc/nginx/conf.d/*
 COPY --from=build /usr/src/app/container/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
 # Copy the built application from the build stage into the image.
-COPY --from=build /usr/src/app/dist /usr/share/nginx/html/dj-live
+# dist 全体をコピーして、ルートレベルのファイルも含める
+COPY --from=build /usr/src/app/dist /usr/share/nginx/html
 
 # Run the application AS a non-root user.
 #USER node
