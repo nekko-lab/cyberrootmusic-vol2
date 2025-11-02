@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { css } from "~/styled-system/css";
+import Nekko_Cloud_logo from "~/routes/nc.png?jsx";
 
 export default component$(() => {
   return (
@@ -14,8 +15,7 @@ export default component$(() => {
       })}
     >
       <span>Powered by </span>
-      <img
-        src="src/routes/nc.png"
+      <Nekko_Cloud_logo
         alt="Nekko Cloud"
         class={css({
           height: "28px",
