@@ -515,7 +515,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Cyber </> Music vol.2 by Nekko Lab",
+  title: "Cyber </> Music vol.2",
   meta: [
     {
       name: "description",
@@ -528,7 +528,7 @@ export const head: DocumentHead = {
     },
     {
       property: "og:title",
-      content: "Cyber </> Music vol.2 in 津田沼際 76th | Produced by Nekko Lab",
+      content: "Cyber </> Music vol.2 at 津田沼祭 76th",
     },
     {
       property: "og:type",
@@ -557,7 +557,7 @@ export const head: DocumentHead = {
     {
       property: "og:description",
       content:
-        'Cyber </> Music vol.2 in 津田沼際 76th | 音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！',
+        'Cyber </> Music vol.2 at 津田沼祭 76th | 音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！',
     },
     {
       name: "twitter:card",
@@ -569,12 +569,12 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:title",
-      content: "Cyber </> Music vol.2 in 津田沼際 76th | produced by Nekko Lab",
+      content: "Cyber </> Music vol.2 at 津田沼祭 76th",
     },
     {
       name: "twitter:description",
       content:
-        'Cyber </> Music vol.2 in 津田沼際 76th | 音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！',
+        'Cyber </> Music vol.2 at 津田沼祭 76th | 音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！',
     },
     {
       name: "twitter:image",
