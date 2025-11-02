@@ -31,7 +31,10 @@ export const RouterHead = component$(() => {
         rel="stylesheet"
       />
       <meta property="og:site_name" content="Nekko Lab" />
-      <meta property="og:title" content="Nekko Lab | 津田沼際 76th" />
+      <meta
+        property="og:title"
+        content="Cyber </> Music vol.2 in 津田沼際 76th | Produced by Nekko Lab"
+      />
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
@@ -43,14 +46,17 @@ export const RouterHead = component$(() => {
       />
       <meta
         property="og:description"
-        content="Nekko Lab 千葉工業大学 津田沼際 76th | DJ Live イベント開催中！最新の音楽とテクノロジーが融合するライブパフォーマンスをお楽しみください。"
+        content='Cyber </> Music vol.2 in 津田沼際 76th | 音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！'
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@nekko_lab" />
-      <meta name="twitter:title" content="Nekko Lab | 津田沼際 76th" />
+      <meta
+        name="twitter:title"
+        content="Cyber </> Music vol.2 in 津田沼際 76th | produced by Nekko Lab"
+      />
       <meta
         name="twitter:description"
-        content="Nekko Lab 千葉工業大学 津田沼際 76th | DJ Live イベント開催中！"
+        content='Cyber </> Music vol.2 in 津田沼際 76th | 音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！'
       />
       <meta
         name="twitter:image"

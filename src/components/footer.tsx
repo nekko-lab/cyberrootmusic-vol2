@@ -10,9 +10,18 @@ export default component$(() => {
         justifyContent: "center",
         alignItems: "end",
         paddingBottom: 10,
+        gap: "8px",
       })}
     >
-      by Nekko lab
+      <span>Powered by </span>
+      <img
+        src="src/routes/nc.png"
+        alt="Nekko Cloud"
+        class={css({
+          height: "28px",
+          width: "auto",
+        })}
+      />
     </footer>
   );
 });
