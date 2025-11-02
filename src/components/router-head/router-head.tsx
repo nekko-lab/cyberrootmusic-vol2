@@ -12,7 +12,7 @@ export const RouterHead = component$(() => {
     <>
       <title>{head.title}</title>
 
-      <link rel="canonical" href="https://numasai25.nekko-lab.dev/dj-live/" />
+      <link rel="canonical" href="https://numasai2025.nekko-lab.dev/dj-live/" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta
         name="description"
@@ -38,12 +38,15 @@ export const RouterHead = component$(() => {
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
-        content="https://numasai25.nekko-lab.dev/dj-live/"
+        content="https://numasai2025.nekko-lab.dev/dj-live/"
       />
       <meta
         property="og:image"
-        content="https://numasai25.nekko-lab.dev/dj-live/og.png"
+        content="https://numasai2025.nekko-lab.dev/dj-live/og.png"
       />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/png" />
       <meta
         property="og:description"
         content='Cyber </> Music vol.2 in 津田沼際 76th | 音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！'
