@@ -522,5 +522,63 @@ export const head: DocumentHead = {
       content:
         '音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！\nCyber </> Music (サイバー ルート ミュージック) は、音楽とみんなが主役になれるDJイベントです。',
     },
+    {
+      property: "og:site_name",
+      content: "Nekko Lab",
+    },
+    {
+      property: "og:title",
+      content: "Cyber </> Music vol.2 in 津田沼際 76th | Produced by Nekko Lab",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      property: "og:url",
+      content: "https://numasai2025.nekko-lab.dev/dj-live/",
+    },
+    {
+      property: "og:image",
+      content: "https://numasai2025.nekko-lab.dev/dj-live/og.png",
+    },
+    {
+      property: "og:image:width",
+      content: "1200",
+    },
+    {
+      property: "og:image:height",
+      content: "630",
+    },
+    {
+      property: "og:image:type",
+      content: "image/png",
+    },
+    {
+      property: "og:description",
+      content:
+        'Cyber </> Music vol.2 in 津田沼際 76th | 音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！',
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:site",
+      content: "@nekko_lab",
+    },
+    {
+      name: "twitter:title",
+      content: "Cyber </> Music vol.2 in 津田沼際 76th | produced by Nekko Lab",
+    },
+    {
+      name: "twitter:description",
+      content:
+        'Cyber </> Music vol.2 in 津田沼際 76th | 音楽と音楽が"まざる"、人と人が"まざる"、自由な音楽の空間へようこそ！',
+    },
+    {
+      name: "twitter:image",
+      content: "https://numasai2025.nekko-lab.dev/dj-live/og.png",
+    },
   ],
 };
