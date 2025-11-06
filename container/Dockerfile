@@ -42,21 +42,9 @@ WORKDIR /usr/src/app
 RUN rm -rf /etc/nginx/conf.d/*
 
 # Copy NGINX config
-COPY --from=build /usr/src/app/container/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+COPY nginx/conf.d/*.conf /etc/nginx/conf.d/
 
 # Copy the built application from the build stage into the image.
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
 COPY --from=build /usr/src/app/node_modules /usr/src/app/node_modules
 COPY --from=build /usr/src/app/server /usr/src/app/server
-
-# Run the application AS a non-root user.
-#USER node
-
-# Copy package.json so that package manager commands can be used.
-#COPY package.json .
-
-# Expose the port that the application listens on.
-#EXPOSE 3000
-
-# Run the application.
-#CMD yarn serve
